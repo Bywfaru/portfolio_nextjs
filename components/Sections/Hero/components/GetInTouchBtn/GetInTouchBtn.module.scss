@@ -1,0 +1,12 @@
+.btn {
+    font-family: "FiraCode-SemiBold";
+    background-color: black;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    &:hover {
+        color: yellow;
+    }
+}
