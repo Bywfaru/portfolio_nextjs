@@ -2,11 +2,18 @@
     border-radius: 50%;
     display: block;
 
-    &__container {
+    &Container {
         // border: 5px solid white;
         border-radius: 50%;
         box-shadow: 4px 9px 20px rgb(0 0 0 / 4%);
         line-height: 0px;
         margin-bottom: 40px;
+    }
+}
+
+.socialMedia {
+    &Container {
+        display: flex;
+        margin-top: 30px;
     }
 }
