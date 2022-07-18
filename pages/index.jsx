@@ -6,6 +6,7 @@ const Home = () => {
     return (
         <div className={styles.container}>
             <Navbar />
+
             <div className={styles.containerMargin}>
                 <Hero />
                 <About />
