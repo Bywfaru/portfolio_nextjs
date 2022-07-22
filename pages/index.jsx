@@ -1,5 +1,12 @@
 import styles from "styles/Home.module.scss";
-import { Hero, About, Skills } from "components/Sections";
+import {
+    Hero,
+    About,
+    Skills,
+    Education,
+    Contact,
+    Projects,
+} from "components/Sections";
 import { Navbar } from "components";
 
 const Home = () => {
@@ -11,6 +18,9 @@ const Home = () => {
                 <Hero />
                 <About />
                 <Skills />
+                <Projects />
+                <Education />
+                <Contact />
             </div>
         </div>
     );
