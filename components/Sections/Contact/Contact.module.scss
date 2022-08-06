@@ -1,0 +1,31 @@
+.contact {
+    &Form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+
+        & input,
+        textarea {
+            box-sizing: border-box;
+            padding: 10px 16px;
+            width: 100%;
+        }
+
+        & textarea::placeholder {
+            font-family: inherit;
+        }
+
+        & button {
+            box-sizing: border-box;
+            padding: 10px 16px;
+            border: none;
+            background-color: lightskyblue;
+            color: white;
+        }
+    }
+
+    &FormContainer {
+        width: 100%;
+    }
+}

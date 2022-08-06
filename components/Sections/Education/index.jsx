@@ -9,9 +9,10 @@ const Education = () => {
 
             <div className={styles.schoolsContainer}>
                 <div className={styles.schoolContainer}>
-                    <span className={styles.schoolName}>
+                    <div className={styles.schoolName}>
+                        {/* TODO: Add school logo */}
                         British Columbia Institute of Technology
-                    </span>
+                    </div>
                     <span className={styles.schoolOption}>
                         Computer Systems Technology - Web and Mobile Development
                     </span>
