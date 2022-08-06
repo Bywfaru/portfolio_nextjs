@@ -1,0 +1,43 @@
+.schoolsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.school {
+    &Container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    &Name {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+
+    &Option {
+        font-style: italic;
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+
+    &Graduated {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+
+    &CompletedCourses {
+        font-size: 1.2rem;
+        font-style: italic;
+        line-height: 1.2;
+    }
+
+    &Years {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+}
