@@ -30,7 +30,17 @@ const Contact = () => {
         <section id={"contact"} className={sectionsStyles.container}>
             <h1 className={homeStyles.heading}>Contact</h1>
 
-            <form className={styles.contactForm} onSubmit={handleSubmit}>
+            <form
+                className={styles.contactForm}
+                onSubmit={handleSubmit}
+                netlify-honeypot={"bot-field"}
+                data-netlify={"true"}
+                data-netlify-recaptcha="true"
+            >
+                <div style={{ position: "absolute", zIndex: -1 }}>
+                    <input name={"bot-field"} required={false} />
+                </div>
+
                 <input
                     type="text"
                     name={"name"}
@@ -62,6 +72,8 @@ const Contact = () => {
                     placeholder={"Your message..."}
                     rows={5}
                 />
+
+                <div data-netlify-recaptcha="true"></div>
 
                 <button type={"submit"}>Send</button>
             </form>
