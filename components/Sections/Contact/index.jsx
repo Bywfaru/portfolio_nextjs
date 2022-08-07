@@ -50,6 +50,7 @@ const Contact = () => {
                 action="/success"
                 data-netlify-recaptcha="true"
             >
+                <input type="hidden" name="form-name" value="contact-form" />
                 <div style={{ position: "absolute", zIndex: -1 }}>
                     <input name={"bot-field"} />
                 </div>
