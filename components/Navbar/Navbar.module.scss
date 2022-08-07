@@ -9,6 +9,20 @@
     z-index: 9999;
 }
 
+.mobile {
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    z-index: 9999;
+}
+
+.desktop {
+    display: none;
+    width: 100vw;
+    position: fixed;
+    z-index: 9999;
+}
+
 .navbar {
     &IconBtn {
         font-size: 3em;
@@ -42,5 +56,42 @@
     &Item:active {
         color: darkgray;
         transform: scale(1.3);
+    }
+}
+
+@media (min-width: 1024px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+    }
+
+    .navbarItems {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.95);
+        width: 100vw;
+        height: min-content;
+        gap: 30px;
+        z-index: 999;
+        transition: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        box-sizing: border-box;
+        padding: 15px 30px;
+    }
+
+    .navbarItem {
+        font-size: 15px;
+
+        &:hover {
+            color: darkgray;
+            transition: color 0.1s ease-out;
+        }
     }
 }

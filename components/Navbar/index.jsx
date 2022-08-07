@@ -9,64 +9,113 @@ const Navbar = () => {
 
     return (
         <>
-            <div className={styles.container}>
-                <div onClick={navBarIconBtnOnClickHandler}>
-                    {isOpen ? (
-                        <IoMdClose className={styles.navbarIconBtn} />
-                    ) : (
-                        <IoMdMenu className={styles.navbarIconBtn} />
-                    )}
+            <div className={styles.mobile}>
+                <div className={styles.container}>
+                    <div onClick={navBarIconBtnOnClickHandler}>
+                        {isOpen ? (
+                            <IoMdClose className={styles.navbarIconBtn} />
+                        ) : (
+                            <IoMdMenu className={styles.navbarIconBtn} />
+                        )}
+                    </div>
+                </div>
+
+                <div
+                    className={styles.navbarItems}
+                    style={{
+                        top: isOpen ? "0" : "-200vh",
+                    }}
+                >
+                    <a
+                        href="#home"
+                        className={styles.navbarItem}
+                        onClick={navBarIconBtnOnClickHandler}
+                    >
+                        Home
+                    </a>
+                    <a
+                        href="#about"
+                        className={styles.navbarItem}
+                        onClick={navBarIconBtnOnClickHandler}
+                    >
+                        Who am I?
+                    </a>
+                    <a
+                        href="#skills"
+                        className={styles.navbarItem}
+                        onClick={navBarIconBtnOnClickHandler}
+                    >
+                        Skills
+                    </a>
+                    <a
+                        href="#projects"
+                        className={styles.navbarItem}
+                        onClick={navBarIconBtnOnClickHandler}
+                    >
+                        Projects
+                    </a>
+                    <a
+                        href="#education"
+                        className={styles.navbarItem}
+                        onClick={navBarIconBtnOnClickHandler}
+                    >
+                        Education
+                    </a>
+                    <a
+                        href="#contact"
+                        className={styles.navbarItem}
+                        onClick={navBarIconBtnOnClickHandler}
+                    >
+                        Contact
+                    </a>
                 </div>
             </div>
 
-            <div
-                className={styles.navbarItems}
-                style={{
-                    top: isOpen ? "0" : "-200vh",
-                }}
-            >
-                <a
-                    href="#home"
-                    className={styles.navbarItem}
-                    onClick={navBarIconBtnOnClickHandler}
-                >
-                    Home
-                </a>
-                <a
-                    href="#about"
-                    className={styles.navbarItem}
-                    onClick={navBarIconBtnOnClickHandler}
-                >
-                    Who am I?
-                </a>
-                <a
-                    href="#skills"
-                    className={styles.navbarItem}
-                    onClick={navBarIconBtnOnClickHandler}
-                >
-                    Skills
-                </a>
-                <a
-                    href="#projects"
-                    className={styles.navbarItem}
-                    onClick={navBarIconBtnOnClickHandler}
-                >
-                    Projects
-                </a>
-                <a
-                    href="#education"
-                    className={styles.navbarItem}
-                    onClick={navBarIconBtnOnClickHandler}
-                >
-                    Education
-                </a>
-                <a
-                    href="#contact"
-                    className={styles.navbarItem}
-                    onClick={navBarIconBtnOnClickHandler}
-                >
-                    Contact
-                </a>
+            <div className={styles.desktop}>
+                <div className={styles.navbarItems}>
+                    <a
+                        href="#home"
+                        className={styles.navbarItem}
+                        onClick={navBarIconBtnOnClickHandler}
+                    >
+                        Home
+                    </a>
+                    <a
+                        href="#about"
+                        className={styles.navbarItem}
+                        onClick={navBarIconBtnOnClickHandler}
+                    >
+                        Who am I?
+                    </a>
+                    <a
+                        href="#skills"
+                        className={styles.navbarItem}
+                        onClick={navBarIconBtnOnClickHandler}
+                    >
+                        Skills
+                    </a>
+                    <a
+                        href="#projects"
+                        className={styles.navbarItem}
+                        onClick={navBarIconBtnOnClickHandler}
+                    >
+                        Projects
+                    </a>
+                    <a
+                        href="#education"
+                        className={styles.navbarItem}
+                        onClick={navBarIconBtnOnClickHandler}
+                    >
+                        Education
+                    </a>
+                    <a
+                        href="#contact"
+                        className={styles.navbarItem}
+                        onClick={navBarIconBtnOnClickHandler}
+                    >
+                        Contact
+                    </a>
+                </div>
             </div>
         </>
     );

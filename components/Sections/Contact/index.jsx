@@ -38,7 +38,7 @@ const Contact = () => {
                 data-netlify-recaptcha="true"
             >
                 <div style={{ position: "absolute", zIndex: -1 }}>
-                    <input name={"bot-field"} required={false} />
+                    <input name={"bot-field"} />
                 </div>
 
                 <input
@@ -47,6 +47,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder={"Name"}
+                    required
                 />
 
                 <input
@@ -54,6 +55,7 @@ const Contact = () => {
                     name={"contactInfo"}
                     value={formData.contactInfo}
                     onChange={handleChange}
+                    required
                     placeholder={"Email/Phone"}
                 />
 
@@ -62,6 +64,7 @@ const Contact = () => {
                     name={"subject"}
                     value={formData.subject}
                     onChange={handleChange}
+                    required
                     placeholder={"Subject"}
                 />
 
@@ -70,6 +73,7 @@ const Contact = () => {
                     onChange={handleChange}
                     value={formData.message}
                     placeholder={"Your message..."}
+                    required
                     rows={5}
                 />
 

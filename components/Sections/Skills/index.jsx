@@ -27,6 +27,18 @@ const Skills = () => {
                             />
                         ))}
                     </div>
+
+                    <div className={styles.logoContainerDesktop}>
+                        {programmingLanguages.map((language, index) => (
+                            <Image
+                                key={index}
+                                src={language.logo}
+                                width={80}
+                                height={80}
+                                alt={`${language.name} logo`}
+                            />
+                        ))}
+                    </div>
                 </div>
 
                 <div className={styles.skillsContainer}>
@@ -39,6 +51,18 @@ const Skills = () => {
                                 src={technology.logo}
                                 width={50}
                                 height={50}
+                                alt={`${technology.name} logo`}
+                            />
+                        ))}
+                    </div>
+
+                    <div className={styles.logoContainerDesktop}>
+                        {technologies.map((technology, index) => (
+                            <Image
+                                key={index}
+                                src={technology.logo}
+                                width={80}
+                                height={80}
                                 alt={`${technology.name} logo`}
                             />
                         ))}

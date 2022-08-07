@@ -4,6 +4,10 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+
+    &Desktop {
+        display: none;
+    }
 }
 
 .skillsContainer {
@@ -19,4 +23,18 @@
     align-items: center;
     width: 100%;
     gap: 30px;
+}
+
+@media (min-width: 1024px) {
+    .logoContainer {
+        display: none;
+
+        &Desktop {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
 }
