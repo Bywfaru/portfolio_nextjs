@@ -49,7 +49,6 @@ const Contact = () => {
                 data-netlify={"true"}
                 method={"POST"}
                 action="/success"
-                data-netlify-recaptcha="true"
             >
                 <input type="hidden" name="form-name" value="contactForm" />
                 <div style={{ position: "absolute", zIndex: -1 }}>
@@ -92,7 +91,7 @@ const Contact = () => {
                     rows={5}
                 />
 
-                <div data-netlify-recaptcha="true"></div>
+                {/* <div data-netlify-recaptcha="true"></div> */}
 
                 <button type={"submit"} disabled={submitted}>
                     {submitted ? "Submitted!" : "Send"}
