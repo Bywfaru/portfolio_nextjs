@@ -1,0 +1,172 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    position: relative;
+}
+
+.helpModalContainer {
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    background-color: rgb(19, 19, 19);
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    opacity: 0.95;
+    z-index: 9999;
+}
+
+.helpModal {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    font-size: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    border-radius: 5px;
+    position: relative;
+    color: black;
+}
+
+.closeBtn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.inputContainer {
+    display: flex;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.copiedToast {
+    display: flex;
+    background-color: rgb(52, 52, 52);
+    box-shadow: 2px 2px 10px rgb(25, 25, 25);
+    color: rgb(151, 151, 151);
+    padding: 10px 60px;
+    border-radius: 5px;
+}
+
+.copiedToastContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    z-index: 999;
+    top: -100%;
+    margin-top: 20px;
+    transition: top 0.5s ease-in-out;
+}
+
+.copiedToastShow {
+    top: 0 !important;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-width: 400px;
+    background-color: rgb(49, 49, 49);
+    color: white;
+    box-sizing: border-box;
+    padding: 60px 30px;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgb(25, 25, 25);
+}
+
+.textField {
+    padding: 10px 40px 10px 20px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    width: 100%;
+}
+
+.questionMarkBtn {
+    color: black;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button {
+    height: 40px;
+    background-color: rgb(0, 110, 255);
+    border-radius: 5px;
+    font-size: 20px;
+    box-sizing: border-box;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color ease-in-out 0.1s;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.button:hover {
+    background-color: rgb(55, 142, 255);
+}
+
+.anchor {
+    text-decoration: underline;
+    overflow-wrap: break-word;
+}
+
+.anchor:hover {
+    color: yellow;
+}
+
+.resultContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.yourUrlText {
+    font-size: 20px;
+}
+
+.title {
+    margin-top: 0;
+}
+
+@media (max-width: 767px) {
+    .formContainer {
+        width: 90%;
+    }
+
+    .helpModal {
+        width: 90%;
+    }
+}
