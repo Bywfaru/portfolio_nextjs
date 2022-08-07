@@ -8,19 +8,26 @@
         & input,
         textarea {
             box-sizing: border-box;
-            padding: 10px 16px;
+            padding: 15px 16px;
             width: 100%;
         }
 
-        & textarea::placeholder {
-            font-family: inherit;
+        & input,
+        textarea,
+        input::placeholder,
+        textarea::placeholder,
+        button {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+                "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+                "Helvetica Neue", sans-serif;
+            font-size: 15px;
         }
 
         & button {
             box-sizing: border-box;
-            padding: 10px 16px;
+            padding: 15px 16px;
             border: none;
-            background-color: lightskyblue;
+            background-color: rgb(60, 180, 255);
             color: white;
         }
     }

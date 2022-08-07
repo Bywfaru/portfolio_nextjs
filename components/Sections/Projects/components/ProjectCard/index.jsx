@@ -1,8 +1,22 @@
 import styles from "./ProjectCard.module.scss";
-import { useRef, useEffect } from "react";
+import Image from "next/image";
 
-const ProjectCard = () => {
-    return <div className={styles.projectCard}></div>;
+const ProjectCard = ({ isVisible = true, name, url, screenshot }) => {
+    return (
+        <div
+            className={styles.projectCard}
+            style={{
+                display: isVisible ? "block" : "none",
+            }}
+        >
+            <Image
+                src={screenshot}
+                layout={"fill"}
+                objectFit={"contain"}
+                alt={""}
+            />
+        </div>
+    );
 };
 
 export default ProjectCard;

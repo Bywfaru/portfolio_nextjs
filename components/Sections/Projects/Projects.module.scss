@@ -3,4 +3,58 @@
     flex-direction: column;
     gap: 30px;
     width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.projectNav {
+    &ButtonContainer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+    }
+
+    &Button {
+        height: 30%;
+        width: 40px;
+        border: 0;
+        transition: background-color ease-out 0.2s;
+        background-color: rgba(255, 255, 255, 0.75);
+        cursor: pointer;
+    }
+
+    &Button:active {
+        background-color: white;
+    }
+}
+
+.progressionStep {
+    flex: 1;
+    height: 10px;
+    background-color: rgba(211, 211, 211, 0.755);
+    transition: background-color ease-out 0.2s;
+    border: 0;
+    cursor: pointer;
+
+    &Active {
+        flex: 1;
+        height: 10px;
+        background-color: rgba(255, 255, 255, 0.75);
+        border: 0;
+    }
+
+    &Container {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        gap: 5px;
+        box-sizing: border-box;
+        padding: 5px;
+    }
 }

@@ -2,21 +2,21 @@
     {
         "name": "Soul Slam Productions",
         "url": "#",
-        "screenshot": "/"
+        "screenshot": "/assets/images/projects/soulslamproductions-screenshot.png"
     },
     {
         "name": "Tekken 7 Data Web App",
         "url": "#",
-        "screenshot": "/"
+        "screenshot": "/assets/images/projects/tekken7webapp-screenshot.png"
     },
     {
         "name": "Covid Companion",
         "url": "#",
-        "screenshot": "/"
+        "screenshot": "/assets/images/projects/covidcompanion-screenshot.png"
     },
     {
         "name": "LinkedUp",
         "url": "#",
-        "screenshot": "/"
+        "screenshot": "/assets/images/projects/linkedup-screenshot.png"
     }
 ]
