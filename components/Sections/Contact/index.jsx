@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Contact.module.scss";
 import homeStyles from "styles/Home.module.scss";
 import sectionsStyles from "../Sections.module.scss";
@@ -12,9 +12,20 @@ const DEFAULT_FORM_DATA = {
 
 const Contact = () => {
     const [formData, setFormData] = useState(DEFAULT_FORM_DATA);
+    const [submitted, setSubmitted] = useState(false);
+
+    useEffect(() => {
+        if (submitted) {
+            setTimeout(() => {
+                setSubmitted(false);
+            }, 1000);
+        }
+    }, [submitted]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        setSubmitted(true);
     };
 
     const handleChange = (event) => {
@@ -31,10 +42,12 @@ const Contact = () => {
             <h1 className={homeStyles.heading}>Contact</h1>
 
             <form
+                name={"contactForm"}
                 className={styles.contactForm}
                 onSubmit={handleSubmit}
                 netlify-honeypot={"bot-field"}
                 data-netlify={"true"}
+                action="/success"
                 data-netlify-recaptcha="true"
             >
                 <div style={{ position: "absolute", zIndex: -1 }}>
@@ -79,7 +92,9 @@ const Contact = () => {
 
                 <div data-netlify-recaptcha="true"></div>
 
-                <button type={"submit"}>Send</button>
+                <button type={"submit"} disabled={submitted}>
+                    {submitted ? "Submitted!" : "Send"}
+                </button>
             </form>
         </section>
     );
