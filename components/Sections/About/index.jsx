@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const About = () => {
     return (
-        <div className={sectionsStyles.container}>
+        <section id={"about"} className={sectionsStyles.container}>
             <h1 className={homeStyles.heading}>Who Am I?</h1>
 
             <div className={styles.avatarContainer}>
@@ -36,7 +36,7 @@ const About = () => {
                 and development. I have always dreamed about telling moving
                 tales through exciting gameplay accompanied by breathtaking art.
             </p>
-        </div>
+        </section>
     );
 };
 

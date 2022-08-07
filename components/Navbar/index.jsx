@@ -23,12 +23,48 @@ const Navbar = () => {
                 className={styles.navbarItems}
                 style={{ top: isOpen ? "0" : "-100vh" }}
             >
-                <span className={styles.navbarItem}>Home</span>
-                <span className={styles.navbarItem}>Who am I?</span>
-                <span className={styles.navbarItem}>Skills</span>
-                <span className={styles.navbarItem}>Projects</span>
-                <span className={styles.navbarItem}>Education</span>
-                <span className={styles.navbarItem}>Contact</span>
+                <a
+                    href="#home"
+                    className={styles.navbarItem}
+                    onClick={navBarIconBtnOnClickHandler}
+                >
+                    Home
+                </a>
+                <a
+                    href="#about"
+                    className={styles.navbarItem}
+                    onClick={navBarIconBtnOnClickHandler}
+                >
+                    Who am I?
+                </a>
+                <a
+                    href="#skills"
+                    className={styles.navbarItem}
+                    onClick={navBarIconBtnOnClickHandler}
+                >
+                    Skills
+                </a>
+                <a
+                    href="#projects"
+                    className={styles.navbarItem}
+                    onClick={navBarIconBtnOnClickHandler}
+                >
+                    Projects
+                </a>
+                <a
+                    href="#education"
+                    className={styles.navbarItem}
+                    onClick={navBarIconBtnOnClickHandler}
+                >
+                    Education
+                </a>
+                <a
+                    href="#contact"
+                    className={styles.navbarItem}
+                    onClick={navBarIconBtnOnClickHandler}
+                >
+                    Contact
+                </a>
             </div>
         </>
     );

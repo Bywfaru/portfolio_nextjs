@@ -4,7 +4,7 @@ import sectionsStyles from "../Sections.module.scss";
 
 const Education = () => {
     return (
-        <div className={sectionsStyles.container}>
+        <section id={"education"} className={sectionsStyles.container}>
             <h1 className={homeStyles.heading}>Education</h1>
 
             <div className={styles.schoolsContainer}>
@@ -45,7 +45,7 @@ const Education = () => {
                     </span>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

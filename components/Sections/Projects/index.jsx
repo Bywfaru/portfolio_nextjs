@@ -27,7 +27,7 @@ const Projects = () => {
     };
 
     return (
-        <div className={sectionsStyles.container}>
+        <section id={"projects"} className={sectionsStyles.container}>
             <h1 className={homeStyles.heading}>Projects</h1>
 
             <div className={styles.projectCardsContainer}>
@@ -76,7 +76,7 @@ const Projects = () => {
                     />
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 

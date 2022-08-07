@@ -27,7 +27,7 @@ const Contact = () => {
     };
 
     return (
-        <div className={sectionsStyles.container}>
+        <section id={"contact"} className={sectionsStyles.container}>
             <h1 className={homeStyles.heading}>Contact</h1>
 
             <form className={styles.contactForm} onSubmit={handleSubmit}>
@@ -65,7 +65,7 @@ const Contact = () => {
 
                 <button type={"submit"}>Send</button>
             </form>
-        </div>
+        </section>
     );
 };
 

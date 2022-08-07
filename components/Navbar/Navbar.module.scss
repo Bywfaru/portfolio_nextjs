@@ -33,5 +33,14 @@
 
     &Item {
         font-size: 2em;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        transition: all ease-in-out 0.2s;
+    }
+
+    &Item:active {
+        color: darkgray;
+        transform: scale(1.3);
     }
 }
