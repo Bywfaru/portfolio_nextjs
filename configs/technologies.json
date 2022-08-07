@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Android",
+        "logo": "/assets/images/technologies/android-logo.jpg"
+    },
+    {
+        "name": "Figma",
+        "logo": "/assets/images/technologies/figma-logo.jpg"
+    },
+    {
+        "name": "Firebase",
+        "logo": "/assets/images/technologies/firebase-logo.jpg"
+    },
+    {
+        "name": "Git",
+        "logo": "/assets/images/technologies/git-logo.jpg"
+    },
+    {
+        "name": "iOS",
+        "logo": "/assets/images/technologies/ios-logo.jpg"
+    },
+    {
+        "name": "MySQL",
+        "logo": "/assets/images/technologies/mysql-logo.jpg"
+    },
+    {
+        "name": "Node.js",
+        "logo": "/assets/images/technologies/nodejs-logo.jpg"
+    },
+    {
+        "name": "React",
+        "logo": "/assets/images/technologies/react-logo.jpg"
+    }
+]

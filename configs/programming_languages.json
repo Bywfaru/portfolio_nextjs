@@ -1,0 +1,46 @@
+[
+    {
+        "name": "C",
+        "logo": "/assets/images/programming-languages/c-logo.jpg"
+    },
+    {
+        "name": "C++",
+        "logo": "/assets/images/programming-languages/cpp-logo.jpg"
+    },
+    {
+        "name": "C#",
+        "logo": "/assets/images/programming-languages/csharp-logo.jpg"
+    },
+    {
+        "name": "CSS3",
+        "logo": "/assets/images/programming-languages/css3-logo.jpg"
+    },
+    {
+        "name": "HTML5",
+        "logo": "/assets/images/programming-languages/html5-logo.jpg"
+    },
+    {
+        "name": "Java",
+        "logo": "/assets/images/programming-languages/java-logo.jpg"
+    },
+    {
+        "name": "Javascript",
+        "logo": "/assets/images/programming-languages/javascript-logo.jpg"
+    },
+    {
+        "name": "PHP",
+        "logo": "/assets/images/programming-languages/php-logo.jpg"
+    },
+    {
+        "name": "Python",
+        "logo": "/assets/images/programming-languages/python-logo.jpg"
+    },
+    {
+        "name": "Swift",
+        "logo": "/assets/images/programming-languages/swift-logo.jpg"
+    },
+    {
+        "name": "typescript",
+        "logo": "/assets/images/programming-languages/typescript-logo.jpg"
+    }
+]

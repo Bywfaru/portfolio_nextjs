@@ -18,5 +18,20 @@
         "name": "LinkedUp",
         "url": "#",
         "screenshot": "/assets/images/projects/linkedup-screenshot.png"
+    },
+    {
+        "name": "D3 Line Chart",
+        "url": "#",
+        "screenshot": "/assets/images/projects/d3linechart-screenshot.png"
+    },
+    {
+        "name": "Mealobox",
+        "url": "#",
+        "screenshot": "/assets/images/projects/mealobox-screenshot.png"
+    },
+    {
+        "name": "Duck Hunt",
+        "url": "#",
+        "screenshot": "/assets/images/projects/zombiehunter-screenshot.png"
     }
 ]
