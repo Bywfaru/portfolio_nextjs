@@ -21,7 +21,9 @@ const Navbar = () => {
 
             <div
                 className={styles.navbarItems}
-                style={{ top: isOpen ? "0" : "-100vh" }}
+                style={{
+                    top: isOpen ? "0" : "-200vh",
+                }}
             >
                 <a
                     href="#home"
