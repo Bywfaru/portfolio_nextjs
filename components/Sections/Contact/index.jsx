@@ -23,8 +23,6 @@ const Contact = () => {
     }, [submitted]);
 
     const handleSubmit = (event) => {
-        event.preventDefault();
-
         setSubmitted(true);
     };
 
@@ -48,7 +46,7 @@ const Contact = () => {
                 netlify-honeypot={"bot-field"}
                 data-netlify={"true"}
                 method={"POST"}
-                action="/success"
+                action={""}
             >
                 <input type="hidden" name="form-name" value="contactForm" />
                 <div style={{ position: "absolute", zIndex: -1 }}>
