@@ -42,6 +42,10 @@
                 transform: scale(1.01);
             }
 
+            &:disabled:hover {
+                transform: scale(1);
+            }
+
             &:active {
                 transform: scale(1);
             }
