@@ -84,7 +84,10 @@ const Home = ({ test }) => {
 
         Promise.all(urls)
             .then(handleResolvedPromises)
-            .catch((error) => setErrorMessage(error.message));
+            .catch((error) => {
+                setErrorMessage(error.message);
+                setIsLoading(false);
+            });
     };
 
     const handleCopy = () => {

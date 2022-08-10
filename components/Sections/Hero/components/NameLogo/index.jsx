@@ -4,9 +4,11 @@ const NameLogo = (props) => {
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             setIsVisible(!isVisible);
         }, 500);
+
+        return () => clearTimeout(timeout);
     }, [isVisible]);
 
     return (

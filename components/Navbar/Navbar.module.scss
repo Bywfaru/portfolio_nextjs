@@ -50,12 +50,17 @@
         text-decoration: none;
         color: black;
         cursor: pointer;
-        transition: all ease-in-out 0.2s;
-    }
+        transition: all ease-in-out 0.1s;
 
-    &Item:active {
-        color: darkgray;
-        transform: scale(1.3);
+        &:hover {
+            color: darkgray;
+            transform: scale(1.05);
+        }
+
+        &:active {
+            color: rgb(114, 114, 114);
+            transform: scale(1);
+        }
     }
 }
 

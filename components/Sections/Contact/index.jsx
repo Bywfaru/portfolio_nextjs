@@ -35,6 +35,14 @@ const Contact = () => {
         });
     };
 
+    const getButtonIsDisabled = () => {
+        const hasEmptyFields = Object.values(formData).filter(
+            (value) => !value.length
+        );
+
+        return submitted || hasEmptyFields.length;
+    };
+
     return (
         <section id={"contact"} className={sectionsStyles.container}>
             <h1 className={homeStyles.heading}>Contact</h1>
@@ -91,7 +99,7 @@ const Contact = () => {
 
                 {/* <div data-netlify-recaptcha="true"></div> */}
 
-                <button type={"submit"} disabled={submitted}>
+                <button type={"submit"} disabled={getButtonIsDisabled()}>
                     {submitted ? "Submitted!" : "Send"}
                 </button>
             </form>

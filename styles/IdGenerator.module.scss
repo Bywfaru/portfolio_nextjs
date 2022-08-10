@@ -65,18 +65,20 @@
 }
 
 .copiedToastContainer {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     width: 100vw;
     z-index: 999;
     top: -100%;
     margin-top: 20px;
-    transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out, opacity 0.75s ease-in-out;
+    opacity: 0;
 }
 
 .copiedToastShow {
     top: 0 !important;
+    opacity: 1;
 }
 
 .formContainer {
@@ -123,7 +125,16 @@
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color ease-in-out 0.1s;
+    transition: background-color ease-in-out 0.1s, transform 0.1s ease-in-out;
+
+    &:hover {
+        background-color: rgb(55, 142, 255);
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(1);
+    }
 }
 
 .form {
@@ -133,17 +144,15 @@
     gap: 10px;
 }
 
-.button:hover {
-    background-color: rgb(55, 142, 255);
-}
-
 .anchor {
     text-decoration: underline;
     overflow-wrap: break-word;
-}
+    color: white;
+    transition: color 0.1s ease-in-out;
 
-.anchor:hover {
-    color: yellow;
+    &:hover {
+        color: yellow;
+    }
 }
 
 .resultContainer {

@@ -30,10 +30,20 @@
             background-color: rgb(60, 180, 255);
             color: white;
             cursor: pointer;
+            transition: background-color 0.1s ease-in-out,
+                transform 0.1s ease-in-out;
 
             &:disabled {
-                cursor: default;
+                cursor: not-allowed;
                 background-color: rgb(40, 104, 144);
+            }
+
+            &:hover {
+                transform: scale(1.01);
+            }
+
+            &:active {
+                transform: scale(1);
             }
         }
     }
