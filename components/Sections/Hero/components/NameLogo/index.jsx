@@ -42,14 +42,8 @@ const NameLogo = (props) => {
                 >
                     {"He"}
                 </tspan>
-                <tspan
-                    id="dash"
-                    x={138}
-                    y={0}
-                    className="st1 st2"
-                    style={{ opacity: isVisible ? 1 : 0 }}
-                >
-                    {"_"}
+                <tspan id="dash" x={138} y={0} className="st1 st2">
+                    {isVisible && "_"}
                 </tspan>
             </text>
             <text
