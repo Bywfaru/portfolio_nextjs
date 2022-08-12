@@ -1,6 +1,7 @@
 .projectCard {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 300px;
     background-color: grey;
+    transition: opacity 0.2s ease-in;
 }

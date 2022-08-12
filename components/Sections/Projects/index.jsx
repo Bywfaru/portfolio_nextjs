@@ -26,6 +26,16 @@ const Projects = () => {
         setVisibleProject(+value);
     };
 
+    const getIsQueued = (index) => {
+        let nextIndex = visibleProject + 1;
+        let prevIndex = visibleProject - 1;
+
+        if (nextIndex > projects.length - 1) nextIndex = 0;
+        if (prevIndex < 0) prevIndex = projects.length - 1;
+
+        return index === nextIndex || index === prevIndex;
+    };
+
     return (
         <section id={"projects"} className={sectionsStyles.container}>
             <h1 className={homeStyles.heading}>Projects</h1>
@@ -66,15 +76,18 @@ const Projects = () => {
                     ))}
                 </div>
 
-                {projects.map((project, index) => (
-                    <ProjectCard
-                        key={index}
-                        name={project.name}
-                        url={project.url}
-                        screenshot={project.screenshot}
-                        isVisible={visibleProject === index}
-                    />
-                ))}
+                <div className={styles.projectCardContainer}>
+                    {projects.map((project, index) => (
+                        <ProjectCard
+                            key={index}
+                            name={project.name}
+                            url={project.url}
+                            screenshot={project.screenshot}
+                            isVisible={visibleProject === index}
+                            isQueued={getIsQueued(index)}
+                        />
+                    ))}
+                </div>
             </div>
         </section>
     );
