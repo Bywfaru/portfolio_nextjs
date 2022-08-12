@@ -4,10 +4,13 @@ import sectionsStyles from "../Sections.module.scss";
 import programmingLanguages from "configs/programming_languages.json";
 import technologies from "configs/technologies.json";
 import Image from "next/image";
+import { Anchor } from "../../";
 
 const Skills = () => {
     return (
-        <section id={"skills"} className={sectionsStyles.container}>
+        <section className={sectionsStyles.container}>
+            <Anchor name={"skills"} />
+
             <h1 className={homeStyles.heading}>Skills</h1>
 
             <div className={styles.container}>

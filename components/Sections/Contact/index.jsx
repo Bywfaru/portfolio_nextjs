@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "./Contact.module.scss";
 import homeStyles from "styles/Home.module.scss";
 import sectionsStyles from "../Sections.module.scss";
+import { Anchor } from "../../";
 
 const DEFAULT_FORM_DATA = {
     name: "",
@@ -44,7 +45,9 @@ const Contact = () => {
     };
 
     return (
-        <section id={"contact"} className={sectionsStyles.container}>
+        <section className={sectionsStyles.container}>
+            <Anchor name={"contact"} />
+
             <h1 className={homeStyles.heading}>Contact</h1>
 
             <form

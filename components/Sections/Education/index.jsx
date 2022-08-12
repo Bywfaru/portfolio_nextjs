@@ -1,10 +1,13 @@
 import styles from "./Education.module.scss";
 import homeStyles from "styles/Home.module.scss";
 import sectionsStyles from "../Sections.module.scss";
+import { Anchor } from "../../";
 
 const Education = () => {
     return (
-        <section id={"education"} className={sectionsStyles.container}>
+        <section className={sectionsStyles.container}>
+            <Anchor name={"education"} />
+
             <h1 className={homeStyles.heading}>Education</h1>
 
             <div className={styles.schoolsContainer}>

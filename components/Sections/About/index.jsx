@@ -3,12 +3,13 @@ import homeStyles from "styles/Home.module.scss";
 import sectionsStyles from "../Sections.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { Anchor } from "../../";
 
 const About = () => {
     return (
-        <section id={"about"} className={sectionsStyles.container}>
+        <section className={sectionsStyles.container}>
+            <Anchor name={"about"} />;
             <h1 className={homeStyles.heading}>Who Am I?</h1>
-
             <div className={styles.avatarContainer}>
                 <Image
                     src={"/assets/images/social-media/github-avatar.png"}
@@ -18,7 +19,6 @@ const About = () => {
                     className={styles.avatar}
                 />
             </div>
-
             <h2 className={homeStyles.subHeading}>Hi, I&apos;m William</h2>
             <p>
                 I&apos;m a 23-year old full-stack web developer with a burning

@@ -4,6 +4,7 @@ import homeStyles from "styles/Home.module.scss";
 import sectionsStyles from "../Sections.module.scss";
 import ProjectCard from "./components/ProjectCard";
 import projects from "configs/projects.json";
+import { Anchor } from "../../";
 
 const Projects = () => {
     const [visibleProject, setVisibleProject] = useState(0);
@@ -37,7 +38,9 @@ const Projects = () => {
     };
 
     return (
-        <section id={"projects"} className={sectionsStyles.container}>
+        <section className={sectionsStyles.container}>
+            <Anchor name={"projects"} />
+
             <h1 className={homeStyles.heading}>Projects</h1>
 
             <span className={styles.projectTitle}>
