@@ -40,23 +40,25 @@ const Projects = () => {
         <section id={"projects"} className={sectionsStyles.container}>
             <h1 className={homeStyles.heading}>Projects</h1>
 
+            <span className={styles.projectTitle}>
+                {projects[visibleProject].name}
+            </span>
+
             <div className={styles.projectCardsContainer}>
-                <div className={styles.projectNavButtonContainer}>
-                    <button
-                        className={styles.projectNavButton}
-                        onClick={handleArrowClick}
-                        value={-1}
-                    >
-                        {"<"}
-                    </button>
-                    <button
-                        className={styles.projectNavButton}
-                        onClick={handleArrowClick}
-                        value={1}
-                    >
-                        {">"}
-                    </button>
-                </div>
+                <button
+                    className={`${styles.projectNavButton} ${styles.projectNavButtonLeft}`}
+                    onClick={handleArrowClick}
+                    value={-1}
+                >
+                    {"<"}
+                </button>
+                <button
+                    className={`${styles.projectNavButton} ${styles.projectNavButtonRight}`}
+                    onClick={handleArrowClick}
+                    value={1}
+                >
+                    {">"}
+                </button>
 
                 <div className={styles.progressionStepContainer}>
                     {projects.map((project, index) => (

@@ -4,4 +4,11 @@
     height: 300px;
     background-color: grey;
     transition: opacity 0.2s ease-in;
+
+    &TitleContainer {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        height: 30px;
+    }
 }

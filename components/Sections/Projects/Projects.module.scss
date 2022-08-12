@@ -11,24 +11,35 @@
     position: relative;
 }
 
-.projectNav {
-    &ButtonContainer {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 1;
-    }
+.projectTitle {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
 
+.projectNav {
     &Button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
         height: 30%;
         width: 40px;
         border: 0;
         transition: background-color ease-out 0.2s;
         background-color: rgba(255, 255, 255, 0.75);
         cursor: pointer;
+        z-index: 3;
+
+        &Right {
+            right: 0;
+        }
+
+        &Left {
+            left: 0;
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
     }
 
     &Button:active {
@@ -56,7 +67,7 @@
         width: 100%;
         position: absolute;
         bottom: 0;
-        z-index: 1;
+        z-index: 2;
         gap: 5px;
         box-sizing: border-box;
         padding: 5px;
