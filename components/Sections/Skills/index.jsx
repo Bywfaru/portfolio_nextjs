@@ -1,8 +1,8 @@
 import styles from "./Skills.module.scss";
 import homeStyles from "styles/Home.module.scss";
 import sectionsStyles from "../Sections.module.scss";
-import programmingLanguages from "configs/programming_languages.json";
-import technologies from "configs/technologies.json";
+import programmingLanguages from "res/programming_languages.json";
+import technologies from "res/technologies.json";
 import Image from "next/image";
 import { Anchor } from "../../";
 
