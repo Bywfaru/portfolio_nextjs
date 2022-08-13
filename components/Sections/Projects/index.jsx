@@ -18,8 +18,6 @@ const Projects = () => {
         if (newValue > projects.length - 1) newValue = 0;
         if (newValue < 0) newValue = projects.length - 1;
 
-        console.log(newValue);
-
         setVisibleProject(newValue);
     };
 
