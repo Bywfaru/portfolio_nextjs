@@ -73,3 +73,9 @@
         padding: 5px;
     }
 }
+
+@media (min-width: 1024px) {
+    .projectCardsContainer {
+        height: 400px;
+    }
+}
