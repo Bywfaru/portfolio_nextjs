@@ -19,14 +19,21 @@ const ProjectCard = ({
                 }}
             >
                 {isVisible && (
-                    <a href={url} target={"_blank"} rel={"noreferrer"}>
-                        <Image
-                            src={screenshot}
-                            layout={"fill"}
-                            objectFit={"contain"}
-                            alt={`${name} screenshot`}
-                        />
-                    </a>
+                    <>
+                        <a href={url} target={"_blank"} rel={"noreferrer"}>
+                            <div className={styles.overlay}>
+                                <span className={styles.overlayProjectName}>
+                                    {name}
+                                </span>
+                            </div>
+                            <Image
+                                src={screenshot}
+                                layout={"fill"}
+                                objectFit={"contain"}
+                                alt={`${name} screenshot`}
+                            />
+                        </a>
+                    </>
                 )}
 
                 {isQueued && (

@@ -43,10 +43,6 @@ const Projects = () => {
 
             <h1 className={homeStyles.heading}>Projects</h1>
 
-            <span className={styles.projectTitle}>
-                {projects[visibleProject].name}
-            </span>
-
             <div className={styles.projectCardsContainer}>
                 <button
                     className={`${styles.projectNavButton} ${styles.projectNavButtonLeft}`}
