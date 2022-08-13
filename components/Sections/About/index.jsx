@@ -8,7 +8,7 @@ import { Anchor } from "../../";
 const About = () => {
     return (
         <section className={sectionsStyles.container}>
-            <Anchor name={"about"} />;
+            <Anchor name={"about"} />
             <h1 className={homeStyles.heading}>Who Am I?</h1>
             <div className={styles.avatarContainer}>
                 <Image
