@@ -44,6 +44,13 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+    .projectCard {
+        width: 564px;
+        height: 752px;
+    }
+}
+
 @media (min-width: 1024px) {
     .projectCard {
         height: 400px;

@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 30px;
     width: 292px;
-    height: 632px;
+    height: 633px;
     position: absolute;
     top: 19px;
     left: 19px;
@@ -72,6 +72,10 @@
     }
 }
 
+.tabletContainer {
+    display: none;
+}
+
 .progressionStep {
     height: 15px;
     border-radius: 50%;
@@ -99,6 +103,26 @@
         gap: 10px;
         box-sizing: border-box;
         padding: 5px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .smartphoneContainer {
+        display: none;
+    }
+
+    .projectCardsContainer {
+        width: 564px;
+        height: 752px;
+        top: 100px;
+        left: 39px;
+    }
+
+    .tabletContainer {
+        display: block;
+        position: relative;
+        width: 642px;
+        height: 951px;
     }
 }
 

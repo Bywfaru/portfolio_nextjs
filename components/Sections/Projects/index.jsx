@@ -97,6 +97,60 @@ const Projects = () => {
                 </div>
             </div>
 
+            <div className={styles.tabletContainer}>
+                <Image
+                    src={"/assets/images/blank_tablet.jpg"}
+                    alt={"Laptop"}
+                    layout={"fill"}
+                    objectFit={"contain"}
+                />
+
+                <div className={styles.projectCardsContainer}>
+                    <button
+                        className={`${styles.projectNavButton} ${styles.projectNavButtonLeft}`}
+                        onClick={handleArrowClick}
+                        value={-1}
+                    >
+                        <BsCaretLeft className={styles.projectNavButtonIcon} />
+                    </button>
+                    <button
+                        className={`${styles.projectNavButton} ${styles.projectNavButtonRight}`}
+                        onClick={handleArrowClick}
+                        value={1}
+                    >
+                        <BsCaretRight className={styles.projectNavButtonIcon} />
+                    </button>
+
+                    <div className={styles.progressionStepContainer}>
+                        {projects.map((project, index) => (
+                            <button
+                                key={index}
+                                value={index}
+                                onClick={handleProgressionStepClick}
+                                className={
+                                    visibleProject === index
+                                        ? styles.progressionStepActive
+                                        : styles.progressionStep
+                                }
+                            ></button>
+                        ))}
+                    </div>
+
+                    <div className={styles.projectCardContainer}>
+                        {projects.map((project, index) => (
+                            <ProjectCard
+                                key={index}
+                                name={project.name}
+                                url={project.url}
+                                screenshot={project.screenshot}
+                                isVisible={visibleProject === index}
+                                isQueued={getIsQueued(index)}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </div>
+
             <div className={styles.smartphoneContainer}>
                 <div className={styles.smartphoneContainerImage}>
                     <Image
