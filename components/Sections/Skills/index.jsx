@@ -8,6 +8,8 @@ import { Anchor } from "../../";
 
 const Skills = () => {
     return (
+        // <div className={styles.background}>
+        // <span className={styles.backgroundStart}></span>
         <section className={sectionsStyles.container}>
             <Anchor name={"skills"} />
 
@@ -73,6 +75,8 @@ const Skills = () => {
                 </div>
             </div>
         </section>
+        // <span className={styles.backgroundEnd}></span>
+        // </div>
     );
 };
 
