@@ -25,9 +25,13 @@ const About = () => {
                 passion for web design and development. I&apos;m a graduate of
                 British Columbia Institute of Technology, where I completed my{" "}
                 <em>
-                    <Link href="https://www.bcit.ca/programs/computer-systems-technology-diploma-full-time-5500dipma/">
+                    <a
+                        href="https://www.bcit.ca/programs/computer-systems-technology-diploma-full-time-5500dipma/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Computer Systems Technology - Web and Mobile Development
-                    </Link>
+                    </a>
                 </em>{" "}
                 diploma.
                 <br />

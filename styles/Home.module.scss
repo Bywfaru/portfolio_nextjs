@@ -16,7 +16,12 @@
     }
 
     a {
-        color: #50acb6;
+        color: #45969f;
+        transition: color 0.1s ease-in-out;
+
+        &:hover {
+            color: #4ea7b1;
+        }
     }
 }
 
