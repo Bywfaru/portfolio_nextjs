@@ -39,7 +39,7 @@
     }
 
     &ProjectName {
-        margin: 40px 30px;
+        margin: 40px 20px;
         color: white;
     }
 }
@@ -48,6 +48,10 @@
     .projectCard {
         width: 564px;
         height: 752px;
+    }
+
+    .overlayProjectName {
+        margin: 40px 30px;
     }
 }
 
@@ -61,6 +65,7 @@
 
         &ProjectName {
             font-size: 1.5rem;
+            margin: 40px 30px;
         }
     }
 }

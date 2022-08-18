@@ -48,7 +48,7 @@ const Contact = () => {
         <section className={sectionsStyles.container}>
             <Anchor name={"contact"} />
 
-            <h1 className={homeStyles.heading}>Contact</h1>
+            <h1 className={homeStyles.heading}>Let&apos;s get in touch :)</h1>
 
             <form
                 name={"contactForm"}

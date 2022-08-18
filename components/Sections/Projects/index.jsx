@@ -41,7 +41,9 @@ const Projects = () => {
         <section className={sectionsStyles.container}>
             <Anchor name={"projects"} />
 
-            <h1 className={homeStyles.heading}>Projects</h1>
+            <h1 className={homeStyles.heading}>
+                ...And what I&apos;ve done with them
+            </h1>
 
             <div className={styles.laptopContainer}>
                 <Image

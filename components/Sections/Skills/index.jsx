@@ -11,7 +11,7 @@ const Skills = () => {
         <section className={sectionsStyles.container}>
             <Anchor name={"skills"} />
 
-            <h1 className={homeStyles.heading}>Skills</h1>
+            <h1 className={homeStyles.heading}>These are my skills...</h1>
 
             <div className={styles.container}>
                 <div className={styles.skillsContainer}>

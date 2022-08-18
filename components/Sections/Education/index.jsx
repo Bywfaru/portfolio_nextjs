@@ -2,19 +2,31 @@ import styles from "./Education.module.scss";
 import homeStyles from "styles/Home.module.scss";
 import sectionsStyles from "../Sections.module.scss";
 import { Anchor } from "../../";
+import bcitLogo from "public/assets/images/school/bcit_logo.png";
+import douglasLogo from "public/assets/images/school/douglas-college_logo.png";
+import Image from "next/image";
 
 const Education = () => {
     return (
         <section className={sectionsStyles.container}>
             <Anchor name={"education"} />
 
-            <h1 className={homeStyles.heading}>Education</h1>
+            <h1 className={homeStyles.heading}>I went to school for this!</h1>
 
             <div className={styles.schoolsContainer}>
                 <div className={styles.schoolContainer}>
-                    <div className={styles.schoolName}>
-                        {/* TODO: Add school logo */}
-                        British Columbia Institute of Technology
+                    <div className={styles.schoolNameContainer}>
+                        <div className={styles.schoolLogoContainer}>
+                            <Image
+                                src={bcitLogo}
+                                width={110.28}
+                                height={100}
+                                alt={"BCIT logo"}
+                            />
+                        </div>
+                        <span className={styles.schoolName}>
+                            British Columbia Institute of Technology
+                        </span>
                     </div>
                     <span className={styles.schoolOption}>
                         Computer Systems Technology - Web and Mobile Development
@@ -28,7 +40,19 @@ const Education = () => {
                 </div>
 
                 <div className={styles.schoolContainer}>
-                    <span className={styles.schoolName}>Douglas College</span>
+                    <div className={styles.schoolNameContainer}>
+                        <div className={styles.schoolLogoContainer}>
+                            <Image
+                                src={douglasLogo}
+                                width={94.82}
+                                height={100}
+                                alt={"Douglas College logo"}
+                            />
+                        </div>
+                        <span className={styles.schoolName}>
+                            Douglas College
+                        </span>
+                    </div>
                     <span className={styles.schoolOption}>
                         Computing Studies and Information Systems
                     </span>

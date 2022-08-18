@@ -9,7 +9,7 @@ const About = () => {
     return (
         <section className={sectionsStyles.container}>
             <Anchor name={"about"} />
-            <h1 className={homeStyles.heading}>Who Am I?</h1>
+            <h1 className={homeStyles.heading}>Hi, I&apos;m William</h1>
             <div className={styles.avatarContainer}>
                 <Image
                     src={"/assets/images/social-media/github-avatar.png"}
@@ -19,7 +19,7 @@ const About = () => {
                     className={styles.avatar}
                 />
             </div>
-            <h2 className={homeStyles.subHeading}>Hi, I&apos;m William</h2>
+            <h2 className={homeStyles.subHeading}>Pleased to meet you!</h2>
             <p>
                 I&apos;m a 23-year old full-stack web developer with a burning
                 passion for web design and development. I&apos;m a graduate of
