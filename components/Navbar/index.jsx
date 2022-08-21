@@ -78,42 +78,60 @@ const Navbar = () => {
                         className={styles.navbarItem}
                         onClick={navBarIconBtnOnClickHandler}
                     >
-                        Home
+                        <div className={styles.navbarItemContainer}>
+                            <span>Home</span>
+                            <div className={styles.navbarItemHoverLine}></div>
+                        </div>
                     </a>
                     <a
-                        href="#about"
+                        href="#home"
                         className={styles.navbarItem}
                         onClick={navBarIconBtnOnClickHandler}
                     >
-                        Who am I?
+                        <div className={styles.navbarItemContainer}>
+                            <span>Who Am I?</span>
+                            <div className={styles.navbarItemHoverLine}></div>
+                        </div>
                     </a>
                     <a
-                        href="#skills"
+                        href="#home"
                         className={styles.navbarItem}
                         onClick={navBarIconBtnOnClickHandler}
                     >
-                        Skills
+                        <div className={styles.navbarItemContainer}>
+                            <span>Skills</span>
+                            <div className={styles.navbarItemHoverLine}></div>
+                        </div>
                     </a>
                     <a
-                        href="#projects"
+                        href="#home"
                         className={styles.navbarItem}
                         onClick={navBarIconBtnOnClickHandler}
                     >
-                        Projects
+                        <div className={styles.navbarItemContainer}>
+                            <span>Projects</span>
+                            <div className={styles.navbarItemHoverLine}></div>
+                        </div>
                     </a>
                     <a
-                        href="#education"
+                        href="#home"
                         className={styles.navbarItem}
                         onClick={navBarIconBtnOnClickHandler}
                     >
-                        Education
+                        <div className={styles.navbarItemContainer}>
+                            <span>Education</span>
+                            <div className={styles.navbarItemHoverLine}></div>
+                        </div>
                     </a>
                     <a
-                        href="#contact"
+                        href="#home"
                         className={styles.navbarItem}
                         onClick={navBarIconBtnOnClickHandler}
                     >
-                        Contact
+                        <div className={styles.navbarItemContainer}>
+                            <span>Contact</span>
+                            <div className={styles.navbarItemHoverLine}></div>
+                        </div>
                     </a>
                 </div>
             </div>
