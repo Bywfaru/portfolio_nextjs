@@ -34,10 +34,7 @@ const Home = ({ test }) => {
     const [showToast, setShowToast] = useState(false);
     const [errorMessage, setErrorMessage] = useState();
     const [showModal, setShowModal] = useState(false);
-    const [generatedUrlHistory, setGeneratedUrlHistory] = useState([
-        "localhost:3000",
-        "google.ca",
-    ]);
+    const [generatedUrlHistory, setGeneratedUrlHistory] = useState([]);
 
     useEffect(() => {
         let timeout;
