@@ -25,12 +25,19 @@ export const getServerSideProps = async (context) => {
 };
 
 const Home = ({ test }) => {
-    const [url, setUrl] = useState("");
+    const [data, setData] = useState({
+        url: "",
+        pathname: "",
+    });
     const [generatedUrl, setGeneratedUrl] = useState();
     const [isLoading, setIsLoading] = useState(false);
     const [showToast, setShowToast] = useState(false);
     const [errorMessage, setErrorMessage] = useState();
     const [showModal, setShowModal] = useState(false);
+    const [generatedUrlHistory, setGeneratedUrlHistory] = useState([
+        "localhost:3000",
+        "google.ca",
+    ]);
 
     useEffect(() => {
         let timeout;
@@ -51,7 +58,12 @@ const Home = ({ test }) => {
         const defaultUrl =
             "http://localhost:3000" + (test ? "/176/checkout" : "");
         let id = `${rarity}_${adjective}_${nature.name}_${pokemon.name}`;
-        let newUrl = url.length ? url : defaultUrl;
+        let newUrl = data.url.length ? data.url : defaultUrl;
+
+        if (data.pathname.length) {
+            newUrl += `?${data.pathname}`;
+        }
+
         const searchParams = new URLSearchParams({
             provider: "TEST",
             affid: "1",
@@ -60,6 +72,8 @@ const Home = ({ test }) => {
 
         newUrl.includes("?") ? (newUrl += "&") : (newUrl += "?");
         newUrl += searchParams.toString();
+
+        setGeneratedUrlHistory([...generatedUrlHistory, newUrl.toString()]);
 
         setGeneratedUrl(newUrl.toString());
         setErrorMessage(null);
@@ -120,57 +134,104 @@ const Home = ({ test }) => {
             )}
 
             <div className={styles.container}>
-                <div className={styles.formContainer}>
-                    <h1 className={styles.title}>
-                        Link With Query String Generator
-                    </h1>
+                <div className={styles.formContainers}>
+                    <div className={styles.formContainer}>
+                        <h1 className={styles.title}>
+                            Link With Query String Generator
+                        </h1>
 
-                    <form onSubmit={handleSubmit} className={styles.form}>
-                        <div className={styles.inputContainer}>
+                        <form onSubmit={handleSubmit} className={styles.form}>
+                            <div className={styles.inputContainer}>
+                                <input
+                                    onChange={(e) =>
+                                        setData({
+                                            ...data,
+                                            url: e.target.value,
+                                        })
+                                    }
+                                    placeholder={"Base URL"}
+                                    className={styles.textField}
+                                    disabled={isLoading}
+                                />
+                                <AiFillQuestionCircle
+                                    className={styles.questionMarkBtn}
+                                    onClick={() => setShowModal(!showModal)}
+                                />
+                            </div>
+
                             <input
-                                onChange={(e) => setUrl(e.target.value)}
-                                placeholder={"Base URL"}
+                                onChange={(e) =>
+                                    setData({
+                                        ...data,
+                                        pathname: e.target.value,
+                                    })
+                                }
+                                placeholder={"Pathname"}
                                 className={styles.textField}
                                 disabled={isLoading}
                             />
-                            <AiFillQuestionCircle
-                                className={styles.questionMarkBtn}
-                                onClick={() => setShowModal(!showModal)}
-                            />
-                        </div>
 
-                        <button
-                            className={styles.button}
-                            type="submit"
-                            disabled={isLoading}
-                            style={isLoading ? { cursor: "default" } : {}}
-                        >
-                            {isLoading ? "Generating..." : "Generate URL"}
-                        </button>
-                    </form>
-
-                    <div className={styles.resultContainer}>
-                        <span className={styles.yourUrlText}>Your URL:</span>
-
-                        <a
-                            href={generatedUrl}
-                            className={styles.anchor}
-                            target={"_blank"}
-                            rel={"noreferrer"}
-                        >
-                            {generatedUrl}
-                        </a>
-
-                        <span>{errorMessage}</span>
-
-                        {generatedUrl && !errorMessage && (
                             <button
-                                onClick={handleCopy}
                                 className={styles.button}
+                                type="submit"
+                                disabled={isLoading}
+                                style={isLoading ? { cursor: "default" } : {}}
                             >
-                                Copy
+                                {isLoading ? "Generating..." : "Generate URL"}
                             </button>
-                        )}
+                        </form>
+
+                        <div className={styles.resultContainer}>
+                            <span className={styles.yourUrlText}>
+                                Your URL:
+                            </span>
+
+                            <a
+                                href={generatedUrl}
+                                className={styles.anchor}
+                                target={"_blank"}
+                                rel={"noreferrer"}
+                            >
+                                {generatedUrl}
+                            </a>
+
+                            <span>{errorMessage}</span>
+
+                            {generatedUrl && !errorMessage && (
+                                <button
+                                    onClick={handleCopy}
+                                    className={styles.button}
+                                >
+                                    Copy
+                                </button>
+                            )}
+                        </div>
+                    </div>
+
+                    <div className={styles.formContainer}>
+                        <h1 className={styles.title}>History</h1>
+
+                        <div className={styles.oldUrlContainer}>
+                            {generatedUrlHistory.map((url, index) => (
+                                <span
+                                    key={index}
+                                    className={styles.oldUrl}
+                                    style={{
+                                        backgroundColor:
+                                            index % 2 ? "darkgrey" : "grey",
+                                    }}
+                                >
+                                    <a
+                                        href={url}
+                                        className={styles.anchor}
+                                        target={"_blank"}
+                                        rel={"noreferrer"}
+                                    >
+                                        {url}
+                                    </a>
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

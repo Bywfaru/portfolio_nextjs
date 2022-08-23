@@ -1,13 +1,27 @@
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     text-align: center;
     justify-content: center;
     align-items: center;
     background-color: rgb(26, 26, 26);
     position: relative;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.formContainers {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(26, 26, 26);
+    position: relative;
+    gap: 30px;
 }
 
 .helpModalContainer {
@@ -79,6 +93,18 @@
 .copiedToastShow {
     top: 0 !important;
     opacity: 1;
+}
+
+.oldUrlContainer {
+    height: 300px;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.oldUrl {
+    width: 100%;
+    display: flex;
+    padding: 5px 10px 8px;
 }
 
 .formContainer {
@@ -171,6 +197,11 @@
 }
 
 @media (max-width: 767px) {
+    .formContainers {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .formContainer {
         width: 90%;
     }
