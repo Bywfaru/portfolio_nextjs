@@ -61,7 +61,7 @@ const Home = ({ test }) => {
         newUrl += data.pathname;
 
         if (data.query.length) {
-            newUrl += `?${data.query}`;
+            newUrl += `${data.query}`;
         }
 
         const searchParams = new URLSearchParams({
