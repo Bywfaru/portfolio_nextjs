@@ -28,6 +28,7 @@ const Home = ({ test }) => {
     const [data, setData] = useState({
         url: "",
         pathname: "",
+        query: "",
     });
     const [generatedUrl, setGeneratedUrl] = useState();
     const [isLoading, setIsLoading] = useState(false);
@@ -57,8 +58,10 @@ const Home = ({ test }) => {
         let id = `${rarity}_${adjective}_${nature.name}_${pokemon.name}`;
         let newUrl = data.url.length ? data.url : defaultUrl;
 
-        if (data.pathname.length) {
-            newUrl += `?${data.pathname}`;
+        newUrl += data.pathname;
+
+        if (data.query.length) {
+            newUrl += `?${data.query}`;
         }
 
         const searchParams = new URLSearchParams({
@@ -70,7 +73,7 @@ const Home = ({ test }) => {
         newUrl.includes("?") ? (newUrl += "&") : (newUrl += "?");
         newUrl += searchParams.toString();
 
-        setGeneratedUrlHistory([...generatedUrlHistory, newUrl.toString()]);
+        setGeneratedUrlHistory([newUrl.toString(), ...generatedUrlHistory]);
 
         setGeneratedUrl(newUrl.toString());
         setErrorMessage(null);
@@ -168,6 +171,18 @@ const Home = ({ test }) => {
                                 disabled={isLoading}
                             />
 
+                            <input
+                                onChange={(e) =>
+                                    setData({
+                                        ...data,
+                                        query: e.target.value,
+                                    })
+                                }
+                                placeholder={"Query"}
+                                className={styles.textField}
+                                disabled={isLoading}
+                            />
+
                             <button
                                 className={styles.button}
                                 type="submit"
@@ -210,23 +225,19 @@ const Home = ({ test }) => {
 
                         <div className={styles.oldUrlContainer}>
                             {generatedUrlHistory.map((url, index) => (
-                                <span
+                                <a
                                     key={index}
-                                    className={styles.oldUrl}
+                                    href={url}
+                                    className={styles.anchor}
                                     style={{
                                         backgroundColor:
                                             index % 2 ? "darkgrey" : "grey",
                                     }}
+                                    target={"_blank"}
+                                    rel={"noreferrer"}
                                 >
-                                    <a
-                                        href={url}
-                                        className={styles.anchor}
-                                        target={"_blank"}
-                                        rel={"noreferrer"}
-                                    >
-                                        {url}
-                                    </a>
-                                </span>
+                                    {url}
+                                </a>
                             ))}
                         </div>
                     </div>

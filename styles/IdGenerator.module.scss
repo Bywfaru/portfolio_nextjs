@@ -97,14 +97,17 @@
 
 .oldUrlContainer {
     height: 300px;
-    width: 100%;
+    align-items: flex-start;
     overflow-y: scroll;
-}
 
-.oldUrl {
-    width: 100%;
-    display: flex;
-    padding: 5px 10px 8px;
+    & > a {
+        text-align: left;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+        display: flex;
+        box-sizing: border-box;
+        padding: 5px 10px 8px;
+    }
 }
 
 .formContainer {
