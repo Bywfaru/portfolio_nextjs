@@ -110,6 +110,10 @@ const Home = ({ test }) => {
         setShowToast(true);
     };
 
+    const clearHistory = () => {
+        setGeneratedUrlHistory([]);
+    }
+
     return (
         <>
             <div
@@ -240,6 +244,8 @@ const Home = ({ test }) => {
                                 </a>
                             ))}
                         </div>
+
+                        <button className={styles.button} onClick={clearHistory}>Clear History</button>
                     </div>
                 </div>
             </div>
