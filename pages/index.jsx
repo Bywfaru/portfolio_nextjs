@@ -1,4 +1,4 @@
-import styles from "styles/Home.module.scss";
+import styles from "@/styles/pages/Home.module.scss";
 import {
     Hero,
     About,
@@ -6,8 +6,8 @@ import {
     Education,
     Contact,
     Projects,
-} from "components/Sections";
-import { Navbar } from "components";
+} from "@/components/Sections";
+import { Navbar } from "@/components";
 
 const Home = () => {
     return (

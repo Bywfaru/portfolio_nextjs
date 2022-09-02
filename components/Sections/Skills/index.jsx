@@ -1,5 +1,5 @@
 import styles from "./Skills.module.scss";
-import homeStyles from "styles/Home.module.scss";
+import homeStyles from "@/styles/pages/Home.module.scss";
 import sectionsStyles from "../Sections.module.scss";
 import programmingLanguages from "res/programming_languages.json";
 import technologies from "res/technologies.json";

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import adjectives from "res/adjectives";
-import styles from "styles/IdGenerator.module.scss";
+import adjectives from "@/res/adjectives";
+import styles from "@/styles/pages/projects/IdGenerator.module.scss";
 import { AiFillQuestionCircle, AiFillCloseCircle } from "react-icons/ai";
 
 const NUM_POKEMON = 913;
@@ -112,7 +112,7 @@ const Home = ({ test }) => {
 
     const clearHistory = () => {
         setGeneratedUrlHistory([]);
-    }
+    };
 
     return (
         <>
@@ -245,7 +245,12 @@ const Home = ({ test }) => {
                             ))}
                         </div>
 
-                        <button className={styles.button} onClick={clearHistory}>Clear History</button>
+                        <button
+                            className={styles.button}
+                            onClick={clearHistory}
+                        >
+                            Clear History
+                        </button>
                     </div>
                 </div>
             </div>

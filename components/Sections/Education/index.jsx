@@ -1,5 +1,5 @@
 import styles from "./Education.module.scss";
-import homeStyles from "styles/Home.module.scss";
+import homeStyles from "@/styles/pages/Home.module.scss";
 import sectionsStyles from "../Sections.module.scss";
 import { Anchor } from "../../";
 import bcitLogo from "public/assets/images/school/bcit_logo.png";

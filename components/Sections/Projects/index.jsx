@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Projects.module.scss";
-import homeStyles from "styles/Home.module.scss";
+import homeStyles from "@/styles/pages/Home.module.scss";
 import sectionsStyles from "../Sections.module.scss";
 import ProjectCard from "./components/ProjectCard";
 import projects from "res/projects.json";

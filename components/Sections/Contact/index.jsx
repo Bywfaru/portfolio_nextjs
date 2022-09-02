@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./Contact.module.scss";
-import homeStyles from "styles/Home.module.scss";
+import homeStyles from "@/styles/pages/Home.module.scss";
 import sectionsStyles from "../Sections.module.scss";
 import { Anchor } from "../../";
 

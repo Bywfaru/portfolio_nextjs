@@ -1,8 +1,7 @@
 import styles from "./About.module.scss";
-import homeStyles from "styles/Home.module.scss";
+import homeStyles from "@/styles/pages/Home.module.scss";
 import sectionsStyles from "../Sections.module.scss";
 import Image from "next/image";
-import Link from "next/link";
 import { Anchor } from "../../";
 
 const About = () => {
