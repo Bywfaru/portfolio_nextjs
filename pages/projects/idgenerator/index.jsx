@@ -24,7 +24,7 @@ export const getServerSideProps = async (context) => {
     };
 };
 
-const Home = ({ test }) => {
+const IdGenerator = ({ test }) => {
     const [data, setData] = useState({
         url: "",
         pathname: "",
@@ -258,4 +258,4 @@ const Home = ({ test }) => {
     );
 };
 
-export default Home;
+export default IdGenerator;

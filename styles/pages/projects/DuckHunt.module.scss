@@ -1,0 +1,16 @@
+.container {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameContainer {
+    background-color: white;
+    width: 90%;
+    height: 70%;
+    display: flex;
+    position: relative;
+}
