@@ -51,15 +51,17 @@ const Contact = () => {
             <h1 className={homeStyles.heading}>Let&apos;s get in touch :)</h1>
 
             <form
-                name={"contactForm"}
                 className={styles.contactForm}
                 onSubmit={handleSubmit}
-                netlify-honeypot={"bot-field"}
-                data-netlify={"true"}
+                action={"https://api.web3forms.com/submit"}
                 method={"POST"}
-                action={""}
             >
-                <input type="hidden" name="form-name" value="contactForm" />
+                <input
+                    type={"hidden"}
+                    name={"access_key"}
+                    value={"6fd50934-e515-479f-a4a6-8e6d02f1523c"}
+                />
+
                 <div style={{ position: "absolute", zIndex: -1 }}>
                     <input name={"bot-field"} />
                 </div>
