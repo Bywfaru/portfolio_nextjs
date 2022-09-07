@@ -8,17 +8,31 @@
 }
 
 .gameContainer {
-    background-color: white;
-    width: 90%;
-    height: 70%;
+    background-color: #3cbcfd;
+    width: 120vh;
+    height: 90vh;
     display: flex;
     position: relative;
 }
 
 .gameBackground {
+    z-index: 3;
+    // background-color: #3cbcfd;
     position: relative;
     width: 100%;
     height: 100%;
+    pointer-events: none;
+}
+
+.duckSpriteSheet {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 76px;
+    height: 76px;
+    background-image: url(/assets/images/duckhunt/duck_1.png);
+    background-size: 228px 304px;
 }
 
 .mainMenu {
@@ -34,6 +48,8 @@
     }
 
     &Item {
+        position: relative;
+        z-index: 3;
         width: 20%;
         height: 100px;
         background-color: brown;
