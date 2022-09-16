@@ -1,6 +1,5 @@
 import styles from "./Footer.module.scss";
 import socialMedia from "res/social_media.json";
-import Link from "next/link";
 import Image from "next/image";
 
 const Footer = () => {

@@ -23,12 +23,32 @@ const DuckSpriteSheet = {
     CELL_HEIGHT: 76,
 };
 
+class Duck {
+    constructor() {}
+}
+
 const DuckHunt = () => {
-    const [ctx, setCtx] = useRef(null);
+    const canvas = useRef(null);
 
-    useEffect(() => {}, []);
+    useEffect(() => {
+        if (!canvas.current) return;
 
-    return <canvas ref={ctx}></canvas>;
+        const ctx = canvas.current.getContext("2d");
+
+        drawBackground(ctx);
+    }, [canvas]);
+
+    const drawBackground = (ctx) => {
+        ctx.fillStyle = "#000000";
+
+        ctx.fillRect(0, 0, canvas.current.width, canvas.current.height);
+    };
+
+    return (
+        <div className={styles.canvasContainer}>
+            <canvas className={styles.canvas} ref={canvas}></canvas>
+        </div>
+    );
 };
 
 export default DuckHunt;
