@@ -9,6 +9,7 @@ const DEFAULT_FORM_DATA = {
     contactInfo: "",
     subject: "",
     message: "",
+    botField: "",
 };
 
 const Contact = () => {
@@ -24,6 +25,8 @@ const Contact = () => {
     }, [submitted]);
 
     const handleSubmit = (event) => {
+        if (formData.botField.length) event.preventDefault();
+
         setSubmitted(true);
     };
 
@@ -38,7 +41,13 @@ const Contact = () => {
 
     const getButtonIsDisabled = () => {
         const hasEmptyFields = Object.values(formData).filter(
-            (value) => !value.length
+            (value, index) => {
+                if (Object.keys(formData)[index] === "botField") {
+                    return false;
+                }
+
+                return !value.length;
+            }
         );
 
         return submitted || hasEmptyFields.length;
@@ -63,7 +72,11 @@ const Contact = () => {
                 />
 
                 <div style={{ position: "absolute", zIndex: -1 }}>
-                    <input name={"bot-field"} />
+                    <input
+                        name={"botField"}
+                        onChange={handleChange}
+                        value={formData.botField}
+                    />
                 </div>
 
                 <input
