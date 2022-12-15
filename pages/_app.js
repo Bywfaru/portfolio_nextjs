@@ -1,4 +1,5 @@
 import { Footer } from "@/components";
+import { Analytics } from "@vercel/analytics";
 import "@/styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
@@ -9,6 +10,8 @@ function MyApp({ Component, pageProps }) {
             </div>
 
             <Footer />
+
+            <Analytics />
         </>
     );
 }
