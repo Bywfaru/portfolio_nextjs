@@ -2,14 +2,21 @@ import { useState, useEffect } from "react";
 
 const NameLogo = (props) => {
     const [isVisible, setIsVisible] = useState(true);
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
+        if (isMounted) return;
+
+        setIsMounted(true);
+
         const timeout = setTimeout(() => {
             setIsVisible(!isVisible);
         }, 500);
 
         return () => clearTimeout(timeout);
-    }, [isVisible]);
+    }, [isMounted, isVisible]);
+
+    if (!isMounted) return null;
 
     return (
         <svg
