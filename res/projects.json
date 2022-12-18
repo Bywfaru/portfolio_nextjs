@@ -1,37 +1,37 @@
 [
-    {
-        "name": "Soul Slam Productions",
-        "url": "https://soulslamproductions.com/",
-        "screenshot": "/assets/images/projects/soulslamproductions-screenshot.png"
-    },
-    {
-        "name": "Tekken 7 Data Web App",
-        "url": "https://comp4537-project-tekken7client.herokuapp.com/",
-        "screenshot": "/assets/images/projects/tekken7webapp-screenshot.png"
-    },
-    {
-        "name": "Covid Companion",
-        "url": "https://comp2800-covid-companion.web.app/",
-        "screenshot": "/assets/images/projects/covidcompanion-screenshot.png"
-    },
-    {
-        "name": "LinkedUp",
-        "url": "https://linkedup-f5db2.web.app/",
-        "screenshot": "/assets/images/projects/linkedup-screenshot.png"
-    },
-    {
-        "name": "D3 Line Chart",
-        "url": "#",
-        "screenshot": "/assets/images/projects/d3linechart-screenshot.png"
-    },
-    {
-        "name": "Mealobox",
-        "url": "https://www.mealobox.com/",
-        "screenshot": "/assets/images/projects/mealobox-screenshot.png"
-    },
-    {
-        "name": "Duck Hunt",
-        "url": "#",
-        "screenshot": "/assets/images/projects/zombiehunter-screenshot.png"
-    }
+  {
+    "name": "Soul Slam Productions",
+    "url": "https://soulslamproductions.com/",
+    "screenshot": "/assets/images/projects/soulslamproductions-screenshot.png"
+  },
+  {
+    "name": "Tekken 7 Data Web App",
+    "url": "https://comp4537-project-tekken7client.herokuapp.com/",
+    "screenshot": "/assets/images/projects/tekken7webapp-screenshot.png"
+  },
+  {
+    "name": "Covid Companion",
+    "url": "https://comp2800-covid-companion.web.app/",
+    "screenshot": "/assets/images/projects/covidcompanion-screenshot.png"
+  },
+  {
+    "name": "LinkedUp",
+    "url": "https://linkedup-f5db2.web.app/",
+    "screenshot": "/assets/images/projects/linkedup-screenshot.png"
+  },
+  {
+    "name": "D3 Line Chart",
+    "url": "#",
+    "screenshot": "/assets/images/projects/d3linechart-screenshot.png"
+  },
+  {
+    "name": "Mealobox",
+    "url": "https://www.mealobox.com/",
+    "screenshot": "/assets/images/projects/mealobox-screenshot.png"
+  },
+  {
+    "name": "Duck Hunt",
+    "url": "#",
+    "screenshot": "/assets/images/projects/zombiehunter-screenshot.png"
+  }
 ]

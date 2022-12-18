@@ -1,17 +1,17 @@
 [
-    {
-        "name": "Instagram",
-        "url": "https://instagram.com/bywfaru",
-        "logo": "/assets/images/social-media/instagram-logo.jpg"
-    },
-    {
-        "name": "Github",
-        "url": "https://github.com/bywfaru",
-        "logo": "/assets/images/social-media/github-logo.jpg"
-    },
-    {
-        "name": "LinkedIn",
-        "url": "https://linkedin.com/in/williamhevancity",
-        "logo": "/assets/images/social-media/linkedin-logo.jpg"
-    }
+  {
+    "name": "Instagram",
+    "url": "https://instagram.com/bywfaru",
+    "logo": "/assets/images/social-media/instagram-logo.jpg"
+  },
+  {
+    "name": "Github",
+    "url": "https://github.com/bywfaru",
+    "logo": "/assets/images/social-media/github-logo.jpg"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://linkedin.com/in/williamhevancity",
+    "logo": "/assets/images/social-media/linkedin-logo.jpg"
+  }
 ]

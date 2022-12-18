@@ -1,54 +1,57 @@
-import { useState, useEffect, useRef } from "react";
-import styles from "@/styles/pages/projects/DuckHunt.module.scss";
-import Image from "next/image";
+import { useState, useEffect, useRef } from 'react';
+import styles from '@/styles/pages/projects/DuckHunt.module.scss';
+import Image from 'next/image';
 
 export const getStaticProps = (props) => {
-    return {
-        notFound: true,
-        props: {},
-    };
+  return {
+    notFound: true,
+    props: {},
+  };
 };
 
 const GameState = {
-    MAIN_MENU: 0,
-    GAME_IN_PROGRESS: 1,
-    GAME_OVER: 2,
-    LEADERBOARD: 3,
+  MAIN_MENU: 0,
+  GAME_IN_PROGRESS: 1,
+  GAME_OVER: 2,
+  LEADERBOARD: 3,
 };
 
 const DuckSpriteSheet = {
-    COLUMNS: 3,
-    ROWS: 4,
-    CELL_WIDTH: 76,
-    CELL_HEIGHT: 76,
+  COLUMNS: 3,
+  ROWS: 4,
+  CELL_WIDTH: 76,
+  CELL_HEIGHT: 76,
 };
 
 class Duck {
-    constructor() {}
+  constructor() {}
 }
 
 const DuckHunt = () => {
-    const canvas = useRef(null);
+  const canvas = useRef(null);
 
-    useEffect(() => {
-        if (!canvas.current) return;
+  useEffect(() => {
+    if (!canvas.current) return;
 
-        const ctx = canvas.current.getContext("2d");
+    const ctx = canvas.current.getContext('2d');
 
-        drawBackground(ctx);
-    }, [canvas]);
+    drawBackground(ctx);
+  }, [canvas]);
 
-    const drawBackground = (ctx) => {
-        ctx.fillStyle = "#000000";
+  const drawBackground = (ctx) => {
+    ctx.fillStyle = '#000000';
 
-        ctx.fillRect(0, 0, canvas.current.width, canvas.current.height);
-    };
+    ctx.fillRect(0, 0, canvas.current.width, canvas.current.height);
+  };
 
-    return (
-        <div className={styles.canvasContainer}>
-            <canvas className={styles.canvas} ref={canvas}></canvas>
-        </div>
-    );
+  return (
+    <div className={styles.canvasContainer}>
+      <canvas
+        className={styles.canvas}
+        ref={canvas}
+      ></canvas>
+    </div>
+  );
 };
 
 export default DuckHunt;

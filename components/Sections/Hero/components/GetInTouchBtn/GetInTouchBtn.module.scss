@@ -1,26 +1,26 @@
 .btn {
-    font-family: "FiraCode-SemiBold";
-    background-color: black;
-    padding: 15px 30px;
-    color: white !important;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: transform 0.05s ease-in-out;
+  font-family: 'FiraCode-SemiBold';
+  background-color: black;
+  padding: 15px 30px;
+  color: white !important;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.05s ease-in-out;
 
-    &Text {
-        transition: color 0.05s ease-in-out;
-    }
+  &Text {
+    transition: color 0.05s ease-in-out;
+  }
 
-    &:hover {
-        transform: scale(1.05);
-    }
+  &:hover {
+    transform: scale(1.05);
+  }
 
-    &:hover &Text {
-        color: yellow !important;
-        text-shadow: 0px 0px 10px goldenrod;
-    }
+  &:hover &Text {
+    color: yellow !important;
+    text-shadow: 0px 0px 10px goldenrod;
+  }
 
-    &:active {
-        transform: scale(1);
-    }
+  &:active {
+    transform: scale(1);
+  }
 }

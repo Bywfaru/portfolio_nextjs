@@ -5,45 +5,45 @@
 
 /** Fonts */
 @font-face {
-    font-family: FiraCode-SemiBold;
-    src: url(../public/assets/fonts/FiraCode-SemiBold.ttf);
+  font-family: FiraCode-SemiBold;
+  src: url(../public/assets/fonts/FiraCode-SemiBold.ttf);
 }
 
 @font-face {
-    font-family: Roboto;
-    src: url(../public/assets/fonts/Roboto/Roboto-Regular.ttf);
+  font-family: Roboto;
+  src: url(../public/assets/fonts/Roboto/Roboto-Regular.ttf);
 }
 
 /* noto-sans-regular - latin */
 @font-face {
-    font-family: "Noto Sans";
-    font-style: normal;
-    font-weight: 400;
-    src: url(../public/assets/fonts/NotoSans/NotoSans-Regular.ttf);
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../public/assets/fonts/NotoSans/NotoSans-Regular.ttf);
 }
 
 /* noto-sans-italic - latin */
 @font-face {
-    font-family: "Noto Sans";
-    font-style: italic;
-    font-weight: 400;
-    src: url(../public/assets/fonts/NotoSans/NotoSans-Italic.ttf);
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url(../public/assets/fonts/NotoSans/NotoSans-Italic.ttf);
 }
 
 /* noto-sans-500 - latin */
 @font-face {
-    font-family: "Noto Sans";
-    font-style: normal;
-    font-weight: 500;
-    src: url(../public/assets/fonts/NotoSans/NotoSans-Medium.ttf);
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../public/assets/fonts/NotoSans/NotoSans-Medium.ttf);
 }
 
 /* noto-sans-700 - latin */
 @font-face {
-    font-family: "Noto Sans";
-    font-style: normal;
-    font-weight: 700;
-    src: url(../public/assets/fonts/NotoSans/NotoSans-Bold.ttf);
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../public/assets/fonts/NotoSans/NotoSans-Bold.ttf);
 }
 
 html,
@@ -127,13 +127,13 @@ time,
 mark,
 audio,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -147,51 +147,51 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 body {
-    line-height: 1;
+  line-height: 1;
 }
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: "";
-    content: none;
+  content: '';
+  content: none;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #212529;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
 }
 
 .siteContainer {
-    min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
 }
