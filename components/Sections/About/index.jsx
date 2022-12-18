@@ -1,20 +1,20 @@
-import styles from './About.module.scss';
-import homeStyles from '@/styles/pages/Home.module.scss';
-import sectionsStyles from '../Sections.module.scss';
-import Image from 'next/image';
-import { Anchor } from '../../';
+import styles from "./About.module.scss";
+import homeStyles from "@/styles/pages/Home.module.scss";
+import sectionsStyles from "../Sections.module.scss";
+import Image from "next/image";
+import { Anchor } from "../../";
 
 const About = () => {
   return (
     <section className={sectionsStyles.container}>
-      <Anchor name={'about'} />
+      <Anchor name={"about"} />
       <h1 className={homeStyles.heading}>Hi, I&apos;m William</h1>
       <div className={styles.avatarContainer}>
         <Image
-          src={'/assets/images/social-media/github-avatar.png'}
+          src={"/assets/images/social-media/github-avatar.png"}
           width={156}
           height={156}
-          alt={'Github avatar'}
+          alt={"Github avatar"}
           className={styles.avatar}
         />
       </div>
@@ -22,7 +22,7 @@ const About = () => {
       <p>
         I&apos;m a 23-year old full-stack web developer with a burning passion
         for web design and development. I&apos;m a graduate of British Columbia
-        Institute of Technology, where I completed my{' '}
+        Institute of Technology, where I completed my{" "}
         <em>
           <a
             href="https://www.bcit.ca/programs/computer-systems-technology-diploma-full-time-5500dipma/"
@@ -31,7 +31,7 @@ const About = () => {
           >
             Computer Systems Technology - Web and Mobile Development
           </a>
-        </em>{' '}
+        </em>{" "}
         diploma.
         <br />
         <br />

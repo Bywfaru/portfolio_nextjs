@@ -1,6 +1,6 @@
-import styles from './Navbar.module.scss';
-import { useState } from 'react';
-import { IoMdMenu, IoMdClose } from 'react-icons/io';
+import styles from "./Navbar.module.scss";
+import { useState } from "react";
+import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ const Navbar = () => {
         <div
           className={styles.navbarItems}
           style={{
-            top: isOpen ? '0' : '-200vh',
+            top: isOpen ? "0" : "-200vh",
           }}
         >
           <a

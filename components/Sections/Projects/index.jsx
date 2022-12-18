@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import styles from './Projects.module.scss';
-import homeStyles from '@/styles/pages/Home.module.scss';
-import sectionsStyles from '../Sections.module.scss';
-import ProjectCard from './components/ProjectCard';
-import projects from 'res/projects.json';
-import { Anchor } from '../../';
-import Image from 'next/image';
-import { BsCaretLeft, BsCaretRight } from 'react-icons/bs';
+import { useState } from "react";
+import styles from "./Projects.module.scss";
+import homeStyles from "@/styles/pages/Home.module.scss";
+import sectionsStyles from "../Sections.module.scss";
+import ProjectCard from "./components/ProjectCard";
+import projects from "res/projects.json";
+import { Anchor } from "../../";
+import Image from "next/image";
+import { BsCaretLeft, BsCaretRight } from "react-icons/bs";
 
 const Projects = () => {
   const [visibleProject, setVisibleProject] = useState(0);
@@ -39,7 +39,7 @@ const Projects = () => {
 
   return (
     <section className={sectionsStyles.container}>
-      <Anchor name={'projects'} />
+      <Anchor name={"projects"} />
 
       <h1 className={homeStyles.heading}>
         ...And what I&apos;ve done with them
@@ -47,10 +47,10 @@ const Projects = () => {
 
       <div className={styles.laptopContainer}>
         <Image
-          src={'/assets/images/blank_laptop.jpg'}
-          alt={'Laptop'}
-          layout={'fill'}
-          objectFit={'contain'}
+          src={"/assets/images/blank_laptop.jpg"}
+          alt={"Laptop"}
+          layout={"fill"}
+          objectFit={"contain"}
         />
 
         <div className={styles.projectCardsContainer}>
@@ -101,10 +101,10 @@ const Projects = () => {
 
       <div className={styles.tabletContainer}>
         <Image
-          src={'/assets/images/blank_tablet.jpg'}
-          alt={'Laptop'}
-          layout={'fill'}
-          objectFit={'contain'}
+          src={"/assets/images/blank_tablet.jpg"}
+          alt={"Laptop"}
+          layout={"fill"}
+          objectFit={"contain"}
         />
 
         <div className={styles.projectCardsContainer}>
@@ -156,10 +156,10 @@ const Projects = () => {
       <div className={styles.smartphoneContainer}>
         <div className={styles.smartphoneContainerImage}>
           <Image
-            src={'/assets/images/blank_smartphone.png'}
-            alt={'Smartphone'}
-            layout={'fill'}
-            objectFit={'contain'}
+            src={"/assets/images/blank_smartphone.png"}
+            alt={"Smartphone"}
+            layout={"fill"}
+            objectFit={"contain"}
           />
         </div>
 

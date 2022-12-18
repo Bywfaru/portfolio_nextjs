@@ -1,10 +1,10 @@
-import { NameLogo, GetInTouchBtn } from './components';
-import styles from './Hero.module.scss';
+import { NameLogo, GetInTouchBtn } from "./components";
+import styles from "./Hero.module.scss";
 
 const Hero = () => {
   return (
     <section
-      id={'home'}
+      id={"home"}
       className={styles.container}
     >
       <NameLogo />

@@ -1,15 +1,15 @@
-import styles from './Education.module.scss';
-import homeStyles from '@/styles/pages/Home.module.scss';
-import sectionsStyles from '../Sections.module.scss';
-import { Anchor } from '../../';
-import bcitLogo from 'public/assets/images/school/bcit_logo.png';
-import douglasLogo from 'public/assets/images/school/douglas-college_logo.png';
-import Image from 'next/image';
+import styles from "./Education.module.scss";
+import homeStyles from "@/styles/pages/Home.module.scss";
+import sectionsStyles from "../Sections.module.scss";
+import { Anchor } from "../../";
+import bcitLogo from "public/assets/images/school/bcit_logo.png";
+import douglasLogo from "public/assets/images/school/douglas-college_logo.png";
+import Image from "next/image";
 
 const Education = () => {
   return (
     <section className={sectionsStyles.container}>
-      <Anchor name={'education'} />
+      <Anchor name={"education"} />
 
       <h1 className={homeStyles.heading}>I went to school for this!</h1>
 
@@ -21,7 +21,7 @@ const Education = () => {
                 src={bcitLogo}
                 width={110.28}
                 height={100}
-                alt={'BCIT logo'}
+                alt={"BCIT logo"}
               />
             </div>
             <span className={styles.schoolName}>
@@ -44,7 +44,7 @@ const Education = () => {
                 src={douglasLogo}
                 width={94.82}
                 height={100}
-                alt={'Douglas College logo'}
+                alt={"Douglas College logo"}
               />
             </div>
             <span className={styles.schoolName}>Douglas College</span>

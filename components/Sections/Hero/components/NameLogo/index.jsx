@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const NameLogo = (props) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -26,7 +26,7 @@ const NameLogo = (props) => {
       y={0}
       viewBox="0 0 551 219.9"
       style={{
-        enableBackground: 'new 0 0 551 219.9',
+        enableBackground: "new 0 0 551 219.9",
         // height: '20vw'
       }}
       xmlSpace="preserve"
@@ -42,10 +42,10 @@ const NameLogo = (props) => {
           y={0}
           className="st1 st2"
           style={{
-            fill: '#fff',
+            fill: "#fff",
           }}
         >
-          {'He'}
+          {"He"}
         </tspan>
         <tspan
           id="dash"
@@ -53,17 +53,17 @@ const NameLogo = (props) => {
           y={0}
           className="st1 st2"
         >
-          {isVisible && '_'}
+          {isVisible && "_"}
         </tspan>
       </text>
       <text
         transform="matrix(1.0149 0 0 1 -4.918 91.468)"
         className="st1"
         style={{
-          fontSize: '112.0846px',
+          fontSize: "112.0846px",
         }}
       >
-        {':William'}
+        {":William"}
       </text>
     </svg>
   );

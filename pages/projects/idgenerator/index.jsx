@@ -1,16 +1,16 @@
-import { useState, useEffect } from 'react';
-import adjectives from '@/res/adjectives';
-import styles from '@/styles/pages/projects/IdGenerator.module.scss';
-import { AiFillQuestionCircle, AiFillCloseCircle } from 'react-icons/ai';
+import { useState, useEffect } from "react";
+import adjectives from "@/res/adjectives";
+import styles from "@/styles/pages/projects/IdGenerator.module.scss";
+import { AiFillQuestionCircle, AiFillCloseCircle } from "react-icons/ai";
 
 const NUM_POKEMON = 913;
 const NUM_NATURES = 25;
 const NUM_ADJECTIVES = adjectives.length;
-const POKE_API_ENDPOINT = 'https://pokeapi.co/api/v2';
+const POKE_API_ENDPOINT = "https://pokeapi.co/api/v2";
 
 const getPokemonId = () => Math.floor(Math.random() * NUM_POKEMON + 1);
 const getNatureId = () => Math.floor(Math.random() * NUM_NATURES + 1);
-const getRarity = () => (Math.round(Math.random()) === 1 ? 'shiny' : 'regular');
+const getRarity = () => (Math.round(Math.random()) === 1 ? "shiny" : "regular");
 const getAdjective = () =>
   adjectives[Math.floor(Math.random() * NUM_ADJECTIVES)];
 
@@ -19,16 +19,16 @@ export const getServerSideProps = async (context) => {
 
   return {
     props: {
-      test: test === 'true',
+      test: test === "true",
     },
   };
 };
 
 const IdGenerator = ({ test }) => {
   const [data, setData] = useState({
-    url: '',
-    pathname: '',
-    query: '',
+    url: "",
+    pathname: "",
+    query: "",
   });
   const [generatedUrl, setGeneratedUrl] = useState();
   const [isLoading, setIsLoading] = useState(false);
@@ -53,7 +53,7 @@ const IdGenerator = ({ test }) => {
     const [pokemon, nature] = allData;
     const rarity = getRarity();
     const adjective = getAdjective();
-    const defaultUrl = 'http://localhost:3000' + (test ? '/176/checkout' : '');
+    const defaultUrl = "http://localhost:3000" + (test ? "/176/checkout" : "");
     let id = `${rarity}_${adjective}_${nature.name}_${pokemon.name}`;
     let newUrl = data.url.length ? data.url : defaultUrl;
 
@@ -64,12 +64,12 @@ const IdGenerator = ({ test }) => {
     }
 
     const searchParams = new URLSearchParams({
-      provider: 'TEST',
-      affid: '1',
+      provider: "TEST",
+      affid: "1",
       click_id: id,
     });
 
-    newUrl.includes('?') ? (newUrl += '&') : (newUrl += '?');
+    newUrl.includes("?") ? (newUrl += "&") : (newUrl += "?");
     newUrl += searchParams.toString();
 
     setGeneratedUrlHistory([newUrl.toString(), ...generatedUrlHistory]);
@@ -151,7 +151,7 @@ const IdGenerator = ({ test }) => {
                       url: e.target.value,
                     })
                   }
-                  placeholder={'Base URL'}
+                  placeholder={"Base URL"}
                   className={styles.textField}
                   disabled={isLoading}
                 />
@@ -168,7 +168,7 @@ const IdGenerator = ({ test }) => {
                     pathname: e.target.value,
                   })
                 }
-                placeholder={'Pathname'}
+                placeholder={"Pathname"}
                 className={styles.textField}
                 disabled={isLoading}
               />
@@ -180,7 +180,7 @@ const IdGenerator = ({ test }) => {
                     query: e.target.value,
                   })
                 }
-                placeholder={'Query'}
+                placeholder={"Query"}
                 className={styles.textField}
                 disabled={isLoading}
               />
@@ -189,9 +189,9 @@ const IdGenerator = ({ test }) => {
                 className={styles.button}
                 type="submit"
                 disabled={isLoading}
-                style={isLoading ? { cursor: 'default' } : {}}
+                style={isLoading ? { cursor: "default" } : {}}
               >
-                {isLoading ? 'Generating...' : 'Generate URL'}
+                {isLoading ? "Generating..." : "Generate URL"}
               </button>
             </form>
 
@@ -201,8 +201,8 @@ const IdGenerator = ({ test }) => {
               <a
                 href={generatedUrl}
                 className={styles.anchor}
-                target={'_blank'}
-                rel={'noreferrer'}
+                target={"_blank"}
+                rel={"noreferrer"}
               >
                 {generatedUrl}
               </a>
@@ -230,10 +230,10 @@ const IdGenerator = ({ test }) => {
                   href={url}
                   className={styles.anchor}
                   style={{
-                    backgroundColor: index % 2 ? 'darkgrey' : 'grey',
+                    backgroundColor: index % 2 ? "darkgrey" : "grey",
                   }}
-                  target={'_blank'}
-                  rel={'noreferrer'}
+                  target={"_blank"}
+                  rel={"noreferrer"}
                 >
                   {url}
                 </a>

@@ -1,17 +1,17 @@
-import styles from './Skills.module.scss';
-import homeStyles from '@/styles/pages/Home.module.scss';
-import sectionsStyles from '../Sections.module.scss';
-import programmingLanguages from 'res/programming_languages.json';
-import technologies from 'res/technologies.json';
-import Image from 'next/image';
-import { Anchor } from '../../';
+import styles from "./Skills.module.scss";
+import homeStyles from "@/styles/pages/Home.module.scss";
+import sectionsStyles from "../Sections.module.scss";
+import programmingLanguages from "res/programming_languages.json";
+import technologies from "res/technologies.json";
+import Image from "next/image";
+import { Anchor } from "../../";
 
 const Skills = () => {
   return (
     // <div className={styles.background}>
     // <span className={styles.backgroundStart}></span>
     <section className={sectionsStyles.container}>
-      <Anchor name={'skills'} />
+      <Anchor name={"skills"} />
 
       <h1 className={homeStyles.heading}>These are my skills...</h1>
 

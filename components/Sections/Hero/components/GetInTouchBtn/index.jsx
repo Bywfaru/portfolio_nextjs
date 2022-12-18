@@ -1,4 +1,4 @@
-import styles from './GetInTouchBtn.module.scss';
+import styles from "./GetInTouchBtn.module.scss";
 
 const GetInTouchBtn = () => {
   return (

@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
-import styles from '@/styles/pages/projects/DuckHunt.module.scss';
-import Image from 'next/image';
+import { useState, useEffect, useRef } from "react";
+import styles from "@/styles/pages/projects/DuckHunt.module.scss";
+import Image from "next/image";
 
 export const getStaticProps = (props) => {
   return {
@@ -33,13 +33,13 @@ const DuckHunt = () => {
   useEffect(() => {
     if (!canvas.current) return;
 
-    const ctx = canvas.current.getContext('2d');
+    const ctx = canvas.current.getContext("2d");
 
     drawBackground(ctx);
   }, [canvas]);
 
   const drawBackground = (ctx) => {
-    ctx.fillStyle = '#000000';
+    ctx.fillStyle = "#000000";
 
     ctx.fillRect(0, 0, canvas.current.width, canvas.current.height);
   };

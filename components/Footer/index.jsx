@@ -1,6 +1,6 @@
-import styles from './Footer.module.scss';
-import socialMedia from 'res/social_media.json';
-import Image from 'next/image';
+import styles from "./Footer.module.scss";
+import socialMedia from "res/social_media.json";
+import Image from "next/image";
 
 const Footer = () => {
   return (

@@ -1,5 +1,5 @@
-import styles from './ProjectCard.module.scss';
-import Image from 'next/image';
+import styles from "./ProjectCard.module.scss";
+import Image from "next/image";
 
 const ProjectCard = ({
   isVisible = true,
@@ -13,25 +13,25 @@ const ProjectCard = ({
       <div
         className={styles.projectCard}
         style={{
-          display: isVisible || isQueued ? 'block' : 'none',
+          display: isVisible || isQueued ? "block" : "none",
           opacity: isVisible ? 1 : 0,
-          pointerEvents: isVisible ? 'all' : 'none',
+          pointerEvents: isVisible ? "all" : "none",
         }}
       >
         {isVisible && (
           <>
             <a
               href={url}
-              target={'_blank'}
-              rel={'noreferrer'}
+              target={"_blank"}
+              rel={"noreferrer"}
             >
               <div className={styles.overlay}>
                 <span className={styles.overlayProjectName}>{name}</span>
               </div>
               <Image
                 src={screenshot}
-                layout={'fill'}
-                objectFit={'contain'}
+                layout={"fill"}
+                objectFit={"contain"}
                 alt={`${name} screenshot`}
               />
             </a>
@@ -41,8 +41,8 @@ const ProjectCard = ({
         {isQueued && (
           <Image
             src={screenshot}
-            layout={'fill'}
-            objectFit={'contain'}
+            layout={"fill"}
+            objectFit={"contain"}
             alt={`${name} screenshot`}
           />
         )}

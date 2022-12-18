@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
-import styles from '@/styles/pages/projects/FightingGame.module.scss';
+import { useState, useEffect, useRef, useCallback } from "react";
+import styles from "@/styles/pages/projects/FightingGame.module.scss";
 
 export const getStaticProps = (props) => {
   return {
@@ -11,7 +11,7 @@ export const getStaticProps = (props) => {
 class Sprite {
   constructor(canvas, { position, velocity, gravity }) {
     this.canvas = canvas;
-    this.ctx = canvas.getContext('2d');
+    this.ctx = canvas.getContext("2d");
     this.position = position;
     this.width = 10;
     this.height = 20;
@@ -21,7 +21,7 @@ class Sprite {
   }
 
   draw() {
-    this.ctx.fillStyle = 'red';
+    this.ctx.fillStyle = "red";
     this.ctx.fillRect(
       this.position.x,
       this.position.y,
@@ -48,7 +48,7 @@ class Sprite {
   }
 
   moveLeft() {
-    console.log('Move left');
+    console.log("Move left");
 
     this.draw();
 
@@ -58,7 +58,7 @@ class Sprite {
   }
 
   moveRight() {
-    console.log('Move right');
+    console.log("Move right");
 
     this.draw();
 
@@ -68,11 +68,11 @@ class Sprite {
   }
 
   jump() {
-    console.log('Jump');
+    console.log("Jump");
   }
 
   crouch() {
-    console.log('Crouch');
+    console.log("Crouch");
   }
 }
 
@@ -96,7 +96,7 @@ const FightingGame = () => {
   useEffect(() => {
     if (!canvasRef.current) return;
 
-    setCtx(canvasRef.current.getContext('2d'));
+    setCtx(canvasRef.current.getContext("2d"));
   }, [canvasRef]);
 
   useEffect(() => {
@@ -124,34 +124,34 @@ const FightingGame = () => {
   useEffect(() => {
     if (!player || !enemy) return;
 
-    window.addEventListener('keydown', (e) => {
+    window.addEventListener("keydown", (e) => {
       const { key } = e;
 
-      console.log('key:', key);
+      console.log("key:", key);
 
       switch (key) {
-        case 'w':
+        case "w":
           player.jump();
           break;
-        case 'a':
+        case "a":
           player.moveLeft();
           break;
-        case 's':
+        case "s":
           player.crouch();
           break;
-        case 'd':
+        case "d":
           player.moveRight();
           break;
-        case 'ArrowUp':
+        case "ArrowUp":
           enemy.jump();
           break;
-        case 'ArrowLeft':
+        case "ArrowLeft":
           enemy.moveLeft();
           break;
-        case 'ArrowDown':
+        case "ArrowDown":
           enemy.crouch();
           break;
-        case 'ArrowRight':
+        case "ArrowRight":
           enemy.moveRight();
           break;
       }
@@ -166,7 +166,7 @@ const FightingGame = () => {
 
   const drawBackground = (ctx) => {
     // ctx.fillStyle = "#ddddbb";
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvasRef.current.width, canvasRef.current.height);
   };
 

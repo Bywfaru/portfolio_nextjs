@@ -1,6 +1,6 @@
-const Anchor = ({ name = '' }) => {
+const Anchor = ({ name = "" }) => {
   return (
-    <div style={{ position: 'relative', top: '-50px' }}>
+    <div style={{ position: "relative", top: "-50px" }}>
       <a name={name}> </a>
     </div>
   );
