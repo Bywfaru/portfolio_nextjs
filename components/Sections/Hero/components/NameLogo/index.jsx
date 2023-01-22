@@ -5,18 +5,20 @@ const NameLogo = (props) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    if (isMounted) return;
+    if (!isMounted) {
+      setIsMounted(true);
 
-    setIsMounted(true);
+      return;
+    }
 
     const timeout = setTimeout(() => {
       setIsVisible(!isVisible);
-    }, 500);
+    }, 1000);
 
     return () => clearTimeout(timeout);
   }, [isMounted, isVisible]);
 
-  if (!isMounted) return null;
+  // if (!isMounted) return null;
 
   return (
     <svg
