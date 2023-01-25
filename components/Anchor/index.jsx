@@ -1,7 +1,7 @@
 const Anchor = ({ name = "" }) => {
   return (
-    <div style={{ position: "relative", top: "-50px" }}>
-      <a name={name}> </a>
+    <div style={{ position: "relative", top: "-5rem" }}>
+      <a name={name}></a>
     </div>
   );
 };

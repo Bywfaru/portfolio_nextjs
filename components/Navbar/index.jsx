@@ -84,7 +84,7 @@ const Navbar = () => {
             </div>
           </a>
           <a
-            href="#home"
+            href="#about"
             className={styles.navbarItem}
             onClick={navBarIconBtnOnClickHandler}
           >
@@ -94,7 +94,7 @@ const Navbar = () => {
             </div>
           </a>
           <a
-            href="#home"
+            href="#skills"
             className={styles.navbarItem}
             onClick={navBarIconBtnOnClickHandler}
           >
@@ -104,7 +104,7 @@ const Navbar = () => {
             </div>
           </a>
           <a
-            href="#home"
+            href="#projects"
             className={styles.navbarItem}
             onClick={navBarIconBtnOnClickHandler}
           >
@@ -114,7 +114,7 @@ const Navbar = () => {
             </div>
           </a>
           <a
-            href="#home"
+            href="#education"
             className={styles.navbarItem}
             onClick={navBarIconBtnOnClickHandler}
           >
@@ -124,7 +124,7 @@ const Navbar = () => {
             </div>
           </a>
           <a
-            href="#home"
+            href="#contact"
             className={styles.navbarItem}
             onClick={navBarIconBtnOnClickHandler}
           >
