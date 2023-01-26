@@ -49,8 +49,10 @@ const Projects = () => {
         <Image
           src={"/assets/images/blank_laptop.jpg"}
           alt={"Laptop"}
-          layout={"fill"}
-          objectFit={"contain"}
+          fill
+          style={{
+            objectFit: "contain",
+          }}
         />
 
         <div className={styles.projectCardsContainer}>
@@ -103,8 +105,10 @@ const Projects = () => {
         <Image
           src={"/assets/images/blank_tablet.jpg"}
           alt={"Laptop"}
-          layout={"fill"}
-          objectFit={"contain"}
+          fill
+          style={{
+            objectFit: "contain",
+          }}
         />
 
         <div className={styles.projectCardsContainer}>
@@ -158,8 +162,10 @@ const Projects = () => {
           <Image
             src={"/assets/images/blank_smartphone.png"}
             alt={"Smartphone"}
-            layout={"fill"}
-            objectFit={"contain"}
+            fill
+            style={{
+              objectFit: "contain",
+            }}
           />
         </div>
 

@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
 
+const FIRST_NAME = ":William";
+const LAST_NAME = "He";
+
 const NameLogo = (props) => {
   const [isVisible, setIsVisible] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
+  const [firstName, setFirstName] = useState(":W");
+  const [lastName, setLastName] = useState("");
 
   useEffect(() => {
     if (!isMounted) {
@@ -18,7 +23,18 @@ const NameLogo = (props) => {
     return () => clearTimeout(timeout);
   }, [isMounted, isVisible]);
 
-  // if (!isMounted) return null;
+  useEffect(() => {
+    if (!isMounted || (firstName === FIRST_NAME && lastName === LAST_NAME))
+      return;
+    const timeout = setTimeout(() => {
+      if (firstName !== FIRST_NAME) {
+        setFirstName(FIRST_NAME.slice(0, firstName.length + 1));
+      } else {
+        setLastName(LAST_NAME.slice(0, lastName.length + 1));
+      }
+    }, 50);
+    return () => clearTimeout(timeout);
+  }, [firstName, lastName, isMounted]);
 
   return (
     <svg
@@ -37,7 +53,7 @@ const NameLogo = (props) => {
       <style>
         {".st1{font-family:'FiraCode-SemiBold'}.st2{font-size:112.088px}"}
       </style>
-      <path d="M-.4 94.1h196v126.3H-.4z" />
+      {!!lastName.length && <path d="M-.4 94.1h196v126.3H-.4z" />}
       <text transform="translate(59.325 186.315)">
         <tspan
           x={0}
@@ -47,7 +63,8 @@ const NameLogo = (props) => {
             fill: "#fff",
           }}
         >
-          {"He"}
+          {lastName}
+          {lastName !== LAST_NAME && firstName === FIRST_NAME && "_"}
         </tspan>
         <tspan
           id="dash"
@@ -55,7 +72,10 @@ const NameLogo = (props) => {
           y={0}
           className="st1 st2"
         >
-          {isVisible && "_"}
+          {isVisible &&
+            firstName === FIRST_NAME &&
+            lastName === LAST_NAME &&
+            "_"}
         </tspan>
       </text>
       <text
@@ -65,7 +85,8 @@ const NameLogo = (props) => {
           fontSize: "112.0846px",
         }}
       >
-        {":William"}
+        {firstName}
+        {firstName !== FIRST_NAME && "_"}
       </text>
     </svg>
   );

@@ -30,9 +30,11 @@ const ProjectCard = ({
               </div>
               <Image
                 src={screenshot}
-                layout={"fill"}
-                objectFit={"contain"}
                 alt={`${name} screenshot`}
+                fill
+                style={{
+                  objectFit: "contain",
+                }}
               />
             </a>
           </>
@@ -41,9 +43,11 @@ const ProjectCard = ({
         {isQueued && (
           <Image
             src={screenshot}
-            layout={"fill"}
-            objectFit={"contain"}
             alt={`${name} screenshot`}
+            fill
+            style={{
+              objectFit: "contain",
+            }}
           />
         )}
       </div>
