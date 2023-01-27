@@ -29,6 +29,7 @@ const CustomInput = ({
         }
       >
         {label}
+        {required && "*"}
       </label>
       <input
         type={type}
