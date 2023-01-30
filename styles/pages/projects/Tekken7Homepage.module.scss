@@ -72,3 +72,39 @@
   align-items: flex-start;
   gap: 10px;
 }
+
+@media (max-width: 767px) {
+  .loginContainer {
+    align-items: center;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .subHeading {
+    text-align: center;
+  }
+
+  .form {
+    align-items: center;
+  }
+
+  .signUpButton {
+    align-self: unset;
+    width: 100%;
+  }
+
+  .loginButton {
+    align-self: center;
+  }
+
+  .ctaButtonContainer {
+    width: 80%;
+  }
+}

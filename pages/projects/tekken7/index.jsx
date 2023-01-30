@@ -1,9 +1,8 @@
+import { CustomInput } from "@/components";
+import tekken7Wallpaper from "@/public/assets/images/tekken7/tekken7_wallpaper.jpg";
 import styles from "@/styles/pages/projects/Tekken7Homepage.module.scss";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
-import tekken7Wallpaper from "@/public/assets/images/tekken7/tekken7_wallpaper.jpg";
-import { CustomInput } from "@/components";
 
 const Tekken7Homepage = () => {
   const [isLogin, setIsLogin] = useState(false);
