@@ -5,6 +5,8 @@ import Image from "next/image";
 import { Anchor } from "../../";
 
 const About = () => {
+  const age = Math.floor((new Date() - new Date("1999-04-17")) / 31556952000);
+
   return (
     <section className={sectionsStyles.container}>
       <Anchor name={"about"} />
@@ -20,9 +22,9 @@ const About = () => {
       </div>
       <h2 className={homeStyles.subHeading}>Pleased to meet you!</h2>
       <p>
-        I&apos;m a 23-year old full-stack web developer with a burning passion
-        for web design and development. I&apos;m a graduate of British Columbia
-        Institute of Technology, where I completed my{" "}
+        I&apos;m a {age}-year old full-stack web developer with a burning
+        passion for web design and development. I&apos;m a graduate of British
+        Columbia Institute of Technology, where I completed my{" "}
         <em>
           <a
             href="https://www.bcit.ca/programs/computer-systems-technology-diploma-full-time-5500dipma/"

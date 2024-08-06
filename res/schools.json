@@ -1,0 +1,57 @@
+[
+  {
+    "name": "British Columbia Institute of Technology",
+    "logo": "/assets/images/school/bcit-logo.png",
+    "program": "Wireless and Mobile Applications Development",
+    "graduated": null,
+    "expectedGraduation": {
+      "year": 2026,
+      "level": "Bachelor of Technology"
+    },
+    "completedCourses": null,
+    "attended": {
+      "from": "Apr 2023",
+      "to": "Present"
+    }
+  },
+  {
+    "name": "British Columbia Institute of Technology",
+    "logo": "/assets/images/school/bcit-logo.png",
+    "program": "Computer Systems Technology",
+    "specialty": "Web and Mobile Development",
+    "graduated": {
+      "month": "Dec",
+      "year": 2021,
+      "level": "Diploma"
+    },
+    "completedCourses": null,
+    "attended": {
+      "from": "Jan 2020",
+      "to": "Dec 2021"
+    }
+  },
+  {
+    "name": "Douglas College",
+    "logo": "/assets/images/school/douglas-college-logo.png",
+    "program": "Computing Studies and Information Systems",
+    "specialty": null,
+    "graduated": null,
+    "completedCourses": [
+      "C++ Programming",
+      "Introduction to Programming",
+      "Calculus",
+      "Introduction to Programming II",
+      "Data Structures & Algorithms",
+      "Calculus II",
+      "Business Statistics",
+      "Linear Algebra",
+      "Academic Writing",
+      "Discrete Mathematics I",
+      "Introduction to Programming II"
+    ],
+    "attended": {
+      "from": "Sep 2017",
+      "to": "May 2019"
+    }
+  }
+]
